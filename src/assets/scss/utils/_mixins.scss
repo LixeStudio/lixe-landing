@@ -1,0 +1,24 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex($direction, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin font($size, $weight, $lineHeight: inherit) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
+
+@mixin circle($size, $color: transparent) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: $color;
+}
