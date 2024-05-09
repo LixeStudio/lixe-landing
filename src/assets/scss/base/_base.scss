@@ -1,0 +1,16 @@
+@use '../utils' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-optical-sizing: auto;
+  background-color: $white;
+  color: $dark;
+}
+
+.wrapper {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+}
