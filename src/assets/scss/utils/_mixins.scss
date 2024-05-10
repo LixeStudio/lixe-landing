@@ -10,10 +10,10 @@
   align-items: $align;
 }
 
-@mixin font($size, $weight, $lineHeight: inherit) {
+@mixin font($size, $weight, $line-height: inherit) {
   font-size: $size;
   font-weight: $weight;
-  line-height: $lineHeight;
+  line-height: $line-height;
 }
 
 @mixin circle($size, $color: transparent) {
@@ -21,4 +21,9 @@
   height: $size;
   border-radius: 50%;
   background-color: $color;
+}
+
+@mixin padding-horizontal($padding-left, $padding-right: $padding-left) {
+  padding-left: $padding-left;
+  padding-right: $padding-right;
 }
