@@ -12,9 +12,7 @@ import HeaderDropdown from '../components/HeaderDropdown.vue';
       </div>
       <div class="header__right-part">
         <HeaderDropdown />
-        <div class="header__button-wrapper">
-          <ButtonPrimary />
-        </div>
+        <ButtonPrimary />
       </div>
     </div>
   </header>
