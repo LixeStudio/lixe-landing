@@ -15,7 +15,7 @@
   @include flex(row, center, center);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: $desktop-sm) {
   .header__container {
     @include padding-horizontal($padding-hr-tablet);
   }
