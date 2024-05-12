@@ -1,5 +1,13 @@
-<script setup></script>
+<script setup>
+import AppHeader from './components/AppHeader.vue';
+import HeroSection from './components/HeroSection.vue';
+</script>
 
 <template>
-  <div></div>
+  <div class="wrapper">
+    <AppHeader />
+    <main>
+      <HeroSection />
+    </main>
+  </div>
 </template>

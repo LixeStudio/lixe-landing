@@ -1,0 +1,34 @@
+@use '../utils' as *;
+
+.header__container {
+  height: 80px;
+  @include flex(row, space-between, center);
+  @include padding-horizontal($padding-hr-desktop);
+}
+
+.header__right-part {
+  @include flex(row, center, center);
+  gap: 12px;
+}
+
+.header__left-part {
+  @include flex(row, center, center);
+}
+
+@media screen and (max-width: 1024px) {
+  .header__container {
+    @include padding-horizontal($padding-hr-tablet);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .header__container {
+    @include padding-horizontal($padding-hr-mobile);
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .header__button-wrapper {
+    display: none;
+  }
+}
