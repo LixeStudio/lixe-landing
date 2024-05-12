@@ -2,9 +2,9 @@
 
 .button-primary {
   width: min-content;
-  height: 46px;
+  min-height: 46px;
   @include flex(column, center, center);
-  padding: 12px 24px;
+  @include padding-horizontal(24px);
   border-radius: $border-radius;
   border: 1px solid $dark;
   cursor: pointer;
@@ -30,4 +30,10 @@
   text-wrap: nowrap;
   text-transform: uppercase;
   @include font(16px, 500, 22px);
+}
+
+@media screen and (max-width: $mobile) {
+  .button-primary {
+    display: none;
+  }
 }
