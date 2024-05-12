@@ -27,3 +27,8 @@
   padding-left: $padding-left;
   padding-right: $padding-right;
 }
+
+@mixin padding-vertical($padding-top, $padding-bottom: $padding-top) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+}
