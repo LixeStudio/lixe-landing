@@ -1,7 +1,7 @@
 @use '../utils' as *;
 
 .header__container {
-  height: 80px;
+  min-height: 80px;
   @include flex(row, space-between, center);
   @include padding-horizontal($padding-hr-desktop);
 }
