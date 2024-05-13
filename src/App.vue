@@ -1,6 +1,7 @@
 <script setup>
 import AppHeader from './components/AppHeader.vue';
 import HeroSection from './components/HeroSection.vue';
+import AppFooter from './components/AppFooter.vue';
 </script>
 
 <template>
@@ -9,5 +10,6 @@ import HeroSection from './components/HeroSection.vue';
     <main>
       <HeroSection />
     </main>
+    <AppFooter />
   </div>
 </template>
