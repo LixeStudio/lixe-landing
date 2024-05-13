@@ -1,8 +1,8 @@
 <script setup>
 import '../assets/scss/components/hero.scss';
-import ButtonWithArrow from '../components/ButtonWithArrow.vue';
-import HeroVideo from '../components/HeroVideo.vue';
-import HeroList from '../components/HeroList.vue';
+import ButtonWithArrow from './ButtonWithArrow.vue';
+import HeroVideo from './HeroVideo.vue';
+import HeroList from './HeroList.vue';
 </script>
 
 <template>
@@ -17,7 +17,7 @@ import HeroList from '../components/HeroList.vue';
             experience, we invite you to explore our portfolio. Stay tuned for updates, and thank
             you for your patience!
           </p>
-          <ButtonWithArrow />
+          <ButtonWithArrow isHidden />
         </div>
       </div>
       <div class="hero__box">

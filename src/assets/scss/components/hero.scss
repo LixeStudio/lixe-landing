@@ -10,10 +10,11 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   gap: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero__title {
-  font-family: 'Random Grotesque Standard Medium';
   @include font(90px, 500, 94px);
   min-width: 550px;
 }
@@ -31,7 +32,6 @@
 .hero__box {
   margin-top: -75px;
   position: relative;
-  z-index: -1;
 }
 
 @media screen and (max-width: $desktop-md) {

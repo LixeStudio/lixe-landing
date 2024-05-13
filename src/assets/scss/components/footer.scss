@@ -1,0 +1,110 @@
+@use '../utils' as *;
+
+.footer {
+  background-color: $dark;
+  color: $white;
+}
+
+.footer__container {
+  @include padding-horizontal($padding-hr-desktop);
+  @include padding-vertical(40px);
+  @include flex(row, flex-end);
+}
+
+.footer__content {
+  width: 80%;
+  @include flex(column);
+  gap: 40px;
+}
+
+.footer__content-top-part {
+  @include flex(column);
+  gap: 20px;
+}
+
+.footer__title {
+  @include font(90px, 500, 94px);
+}
+
+.footer__paragraph {
+  @include font(28px, 500, 36px);
+  color: $gray-4;
+}
+
+.footer__line {
+  height: 1px;
+  background-color: $white;
+}
+
+.footer__box {
+  @include flex(row);
+  gap: 20px;
+}
+
+.footer__logo-box {
+  width: 217px;
+  @include flex(column);
+  gap: 16px;
+}
+
+.footer__logo {
+  max-width: 75px;
+}
+
+.footer__contacts {
+  @include flex(column);
+  gap: 8px;
+}
+
+.footer__contacts-item {
+  @include flex(row);
+  gap: 4px;
+  @include font(18px, 600, 26px);
+}
+
+.footer__copyright {
+  @include font(16px, 400, 23px);
+  color: $dark-5;
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .footer__container {
+    @include padding-horizontal($padding-hr-tablet);
+  }
+
+  .footer__content {
+    width: 100%;
+  }
+
+  .footer__title {
+    @include font(56px, 500, 60px);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .footer__container {
+    @include padding-horizontal($padding-hr-mobile);
+  }
+
+  .footer__paragraph {
+    @include font(18px, 500, 26px);
+  }
+
+  .footer__logo-box {
+    width: 155px;
+  }
+
+  .footer__copyright {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .footer__logo-box {
+    width: auto;
+  }
+
+  .footer__box {
+    @include flex(column);
+  }
+}
