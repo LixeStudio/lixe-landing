@@ -17,7 +17,7 @@ import HeroList from './HeroList.vue';
             experience, we invite you to explore our portfolio. Stay tuned for updates, and thank
             you for your patience!
           </p>
-          <ButtonWithArrow />
+          <ButtonWithArrow isHidden />
         </div>
       </div>
       <div class="hero__box">
