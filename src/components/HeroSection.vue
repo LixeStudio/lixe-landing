@@ -1,8 +1,8 @@
 <script setup>
 import '../assets/scss/components/hero.scss';
-import ButtonWithArrow from '../components/ButtonWithArrow.vue';
-import HeroVideo from '../components/HeroVideo.vue';
-import HeroList from '../components/HeroList.vue';
+import ButtonWithArrow from './ButtonWithArrow.vue';
+import HeroVideo from './HeroVideo.vue';
+import HeroList from './HeroList.vue';
 </script>
 
 <template>

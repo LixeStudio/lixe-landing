@@ -1,7 +1,7 @@
 <script setup>
 import '../assets/scss/components/header.scss';
-import ButtonPrimary from '../components/ButtonPrimary.vue';
-import HeaderDropdown from '../components/HeaderDropdown.vue';
+import ButtonPrimary from './ButtonPrimary.vue';
+import HeaderDropdown from './HeaderDropdown.vue';
 </script>
 
 <template>
