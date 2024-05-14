@@ -1,0 +1,60 @@
+@use '../utils' as *;
+
+.contact-form {
+  @include flex(column);
+  gap: 40px;
+}
+
+.contact-form__fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 20px;
+  row-gap: 12px;
+}
+
+.contact-form__label {
+  color: $dark-2;
+  @include font(18px, 600, 26px);
+  display: block;
+}
+
+.contact-form__field {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid $dark;
+  @include padding-vertical(20px);
+
+  &::placeholder {
+    color: $dark-4;
+  }
+}
+
+.contact-form__details {
+  grid-column: 1 / span 2;
+}
+
+.contact-form__textarea {
+  resize: vertical;
+  min-height: 63px;
+  height: 63px;
+}
+
+.contact-form__button {
+  min-width: 210px;
+}
+
+@media screen and (max-width: $tablet) {
+  .contact-form__fields {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form__details {
+    grid-column: auto;
+  }
+
+  .contact-form__button {
+    min-width: none;
+    width: 100%;
+  }
+}
