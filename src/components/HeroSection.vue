@@ -3,10 +3,33 @@ import '../assets/scss/components/hero.scss';
 import ButtonWithArrow from './ButtonWithArrow.vue';
 import HeroVideo from './HeroVideo.vue';
 import HeroList from './HeroList.vue';
+import { onMounted, onUnmounted, ref } from 'vue';
+
+const hero = ref(null);
+const emit = defineEmits(['setShowButton']);
+
+const handleScroll = () => {
+  if (hero.value) {
+    const targetRect = hero.value.getBoundingClientRect();
+    if (targetRect.top < window.innerHeight && targetRect.bottom >= 0) {
+      emit('setShowButton', false);
+      return;
+    }
+    emit('setShowButton', true);
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <template>
-  <section class="hero">
+  <section class="hero" ref="hero">
     <div class="hero__container">
       <div class="hero__content">
         <h1 class="hero__title">Your Digital Journey Starts Here</h1>

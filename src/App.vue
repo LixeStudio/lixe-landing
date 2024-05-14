@@ -1,14 +1,21 @@
 <script setup>
-import AppHeader from './components/AppHeader.vue';
+import AppHeader from './layouts/AppHeader.vue';
 import HeroSection from './components/HeroSection.vue';
-import AppFooter from './components/AppFooter.vue';
+import AppFooter from './layouts/AppFooter.vue';
+import { ref } from 'vue';
+
+const showButton = ref(false);
+
+const setShowButton = (value) => {
+  showButton.value = value;
+};
 </script>
 
 <template>
   <div class="wrapper">
-    <AppHeader />
+    <AppHeader :showButton="showButton" />
     <main>
-      <HeroSection />
+      <HeroSection @setShowButton="setShowButton" />
     </main>
     <AppFooter />
   </div>
