@@ -1,14 +1,23 @@
 <script setup>
 import '../assets/scss/components/button-primary.scss';
+
+defineProps({
+  isHidden: Boolean
+});
 </script>
 
 <template>
-  <div class="button-primary">
+  <button
+    class="button-primary"
+    :class="{
+      'button-primary_hidden': isHidden
+    }"
+  >
     <div class="button-primary__inner-wrapper">
       <div class="button-primary__inner">
-        <span class="button-primary__text">Start the project</span>
-        <span class="button-primary__text">Start the project</span>
+        <span class="button-primary__text"><slot /></span>
+        <span class="button-primary__text"><slot /></span>
       </div>
     </div>
-  </div>
+  </button>
 </template>
