@@ -2,11 +2,18 @@
 
 .header__dropdown {
   position: relative;
+  @include size(71px, 38px);
+}
+
+.header__dropdown-container {
+  position: absolute;
+  top: 0;
+  background-color: $white;
+  border-radius: 20px;
+  @include padding-horizontal(12px);
 }
 
 .header__dropdown-button {
-  @include flex(row, center, center);
-  gap: 8px;
   padding: 8px 0;
   cursor: pointer;
 }
@@ -38,24 +45,14 @@
 }
 
 .header__dropdown-content {
-  position: absolute;
-  width: 100%;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.4s ease-in;
+  transition: all 0.2s ease-in;
 
   &.header__dropdown-content_active {
     max-height: 100px;
-    transition: all 0.4s ease-in 0.2s;
-  }
-}
-
-.header__dropdown-icon {
-  @include flex(row, center, center);
-  transition: all 0.4s ease;
-
-  &.header__dropdown-icon_active {
-    transform: rotate(-180deg);
+    transition: all 0.2s ease-out;
+    padding-bottom: 8px;
   }
 }
 

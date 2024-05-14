@@ -10,13 +10,13 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   gap: 20px;
-  position: relative;
-  z-index: 2;
 }
 
 .hero__title {
   @include font(90px, 500, 94px);
   min-width: 550px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero__details {
