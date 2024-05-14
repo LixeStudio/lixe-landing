@@ -56,12 +56,6 @@
   gap: 8px;
 }
 
-.footer__contacts-item {
-  @include flex(row);
-  gap: 4px;
-  @include font(18px, 600, 26px);
-}
-
 .footer__copyright {
   @include font(16px, 400, 23px);
   color: $dark-5;

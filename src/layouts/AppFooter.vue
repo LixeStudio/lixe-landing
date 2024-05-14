@@ -18,23 +18,7 @@ import ButtonWithArrow from '../components/ButtonWithArrow.vue';
             <img class="footer__logo" src="../assets/images/icons/logo-dark.svg" alt="Lixe logo" />
             <p>Creative digital production</p>
           </div>
-          <ul class="footer__contacts">
-            <li class="footer__contacts-item">
-              <img src="../assets/images/icons/email.svg" alt="Email" /><span
-                >lixestudio@gmail.com</span
-              >
-            </li>
-            <li class="footer__contacts-item">
-              <img src="../assets/images/icons/telegram.svg" alt="Telegram" /><span
-                >@lixe.studio</span
-              >
-            </li>
-            <li class="footer__contacts-item">
-              <img src="../assets/images/icons/whatsapp.svg" alt="WhatsApp" /><span
-                >+123 456 789 00</span
-              >
-            </li>
-          </ul>
+          <ContactList class="footer__contacts" />
         </div>
         <div class="footer__line"></div>
         <p class="footer__copyright">© 2024 Lixe.studio. All rights reserved</p>
