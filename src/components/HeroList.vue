@@ -4,14 +4,8 @@ import '../assets/scss/components/hero-list.scss';
 
 <template>
   <ul class="hero__list">
-    <li class="hero__list-item">
-      <img src="../assets/images/icons/ellipse.svg" alt="Ellipse" /> <span>Innovation</span>
-    </li>
-    <li class="hero__list-item">
-      <img src="../assets/images/icons/ellipse.svg" alt="Ellipse" /> <span>Web Solutions</span>
-    </li>
-    <li class="hero__list-item">
-      <img src="../assets/images/icons/ellipse.svg" alt="Ellipse" /> <span>Functionality</span>
-    </li>
+    <li class="hero__list-item">Innovation</li>
+    <li class="hero__list-item">Web Solutions</li>
+    <li class="hero__list-item">Functionality</li>
   </ul>
 </template>
