@@ -1,6 +1,6 @@
 <script setup>
-import '../assets/scss/components/footer.scss';
-import ButtonWithArrow from './ButtonWithArrow.vue';
+import '../assets/scss/layouts/footer.scss';
+import ButtonWithArrow from '../components/ButtonWithArrow.vue';
 </script>
 
 <template>
