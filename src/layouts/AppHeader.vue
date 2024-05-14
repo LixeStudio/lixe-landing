@@ -6,6 +6,8 @@ import HeaderDropdown from '../components/HeaderDropdown.vue';
 defineProps({
   showButton: Boolean
 });
+
+const emit = defineEmits(['openModal']);
 </script>
 
 <template>
@@ -16,7 +18,9 @@ defineProps({
       </div>
       <div class="header__right-part">
         <HeaderDropdown />
-        <ButtonPrimary v-if="showButton" v-motion-roll-top />
+        <ButtonPrimary isHidden v-if="showButton" v-motion-roll-top @click="emit('openModal')"
+          >Start the project</ButtonPrimary
+        >
       </div>
     </div>
   </header>

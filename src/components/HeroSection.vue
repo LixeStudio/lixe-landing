@@ -6,7 +6,7 @@ import HeroList from './HeroList.vue';
 import { onMounted, onUnmounted, ref } from 'vue';
 
 const hero = ref(null);
-const emit = defineEmits(['setShowButton']);
+const emit = defineEmits(['setShowButton', 'openModal']);
 
 const handleScroll = () => {
   if (hero.value) {
@@ -40,7 +40,7 @@ onUnmounted(() => {
             experience, we invite you to explore our portfolio. Stay tuned for updates, and thank
             you for your patience!
           </p>
-          <ButtonWithArrow isHidden />
+          <ButtonWithArrow isHidden @click="emit('openModal')" />
         </div>
       </div>
       <div class="hero__box">

@@ -1,6 +1,9 @@
 <script setup>
 import '../assets/scss/layouts/footer.scss';
 import ButtonWithArrow from '../components/ButtonWithArrow.vue';
+import ContactList from '../components/ContactList.vue';
+
+const emit = defineEmits(['openModal']);
 </script>
 
 <template>
@@ -10,7 +13,7 @@ import ButtonWithArrow from '../components/ButtonWithArrow.vue';
         <div class="footer__content-top-part">
           <h3 class="footer__title">Let’s Create</h3>
           <p class="footer__paragraph">Contact us now to discuss your project.</p>
-          <ButtonWithArrow theme="light" />
+          <ButtonWithArrow theme="light" @click="emit('openModal')" />
         </div>
         <div class="footer__line"></div>
         <div class="footer__box">
