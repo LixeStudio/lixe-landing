@@ -1,15 +1,45 @@
 <script setup>
-import AppHeader from './components/AppHeader.vue';
+import AppHeader from './layouts/AppHeader.vue';
 import HeroSection from './components/HeroSection.vue';
-import AppFooter from './components/AppFooter.vue';
+import ContactModal from './components/ContactModal.vue';
+import ContactForm from './components/ContactForm.vue';
+import AppFooter from './layouts/AppFooter.vue';
+import { ref } from 'vue';
+
+const showButton = ref(false);
+
+const setShowButton = (value) => {
+  showButton.value = value;
+};
+
+const isModalOpened = ref(false);
+
+const openModal = () => {
+  isModalOpened.value = true;
+};
+
+const closeModal = () => {
+  isModalOpened.value = false;
+};
+
+const handleSubmit = () => {
+  console.log('Submit');
+  closeModal();
+};
 </script>
 
 <template>
   <div class="wrapper">
-    <AppHeader />
+    <AppHeader :showButton="showButton" @openModal="openModal" />
     <main>
-      <HeroSection />
+      <HeroSection @setShowButton="setShowButton" @openModal="openModal" />
+      <div :style="{ height: '1000px' }"></div>
     </main>
-    <AppFooter />
+    <AppFooter @openModal="openModal" />
+    <Transition>
+      <ContactModal :isOpen="isModalOpened" @closeModal="closeModal">
+        <ContactForm @closeModal="closeModal" @handleSubmit="handleSubmit" />
+      </ContactModal>
+    </Transition>
   </div>
 </template>

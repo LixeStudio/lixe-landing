@@ -1,6 +1,13 @@
 @use '../utils' as *;
 
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
+
 .header__container {
+  width: 100%;
   min-height: 80px;
   @include flex(row, space-between, center);
   @include padding-horizontal($padding-hr-desktop);

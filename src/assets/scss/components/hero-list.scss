@@ -13,6 +13,12 @@
   @include flex(row, center, center);
   gap: 10px;
   @include font(19px, 600, 26px);
+
+  &:before {
+    content: '';
+    @include circle(8px);
+    border: 1px solid $dark;
+  }
 }
 
 @media screen and (max-width: $desktop-md) {
