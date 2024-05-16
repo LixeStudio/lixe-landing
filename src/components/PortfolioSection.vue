@@ -5,8 +5,11 @@ import { projects } from '../app/projects';
 import AppTab from '../components/AppTab.vue';
 import PortfolioProject from '../components/PortfolioProject.vue';
 import AppDropdown from './AppDropdown.vue';
+import ButtonPrimary from '../components/ButtonPrimary.vue';
 
+const allShown = ref(false);
 const currentTab = ref('');
+
 const tabs = [
   'e-commerce',
   'lorem ipsum',
@@ -22,12 +25,18 @@ const filterProjects = () => {
   return projects.filter((project) => project.type.includes(currentTab.value));
 };
 
+const sliceProjects = (projects) => {
+  return allShown.value ? projects : projects.slice(0, 6);
+};
+
 const evenFilteredProjects = computed(() => {
-  return filterProjects().filter((project, index) => index % 2 === 0);
+  const filteredProjects = filterProjects();
+  return sliceProjects(filteredProjects).filter((project, index) => index % 2 === 0);
 });
 
 const oddFilteredProjects = computed(() => {
-  return filterProjects().filter((project, index) => index % 2 === 1);
+  const filteredProjects = filterProjects();
+  return sliceProjects(filteredProjects).filter((project, index) => index % 2 === 1);
 });
 
 const currentSort = ref('');
@@ -35,6 +44,10 @@ const sortOptions = ref(['Newest to Oldest', 'Oldest to Newest']);
 
 const setCurrentSort = (current) => {
   currentSort.value = current;
+};
+
+const handleButtonClick = () => {
+  allShown.value = !allShown.value;
 };
 </script>
 
@@ -76,6 +89,12 @@ const setCurrentSort = (current) => {
           />
         </div>
       </div>
+      <ButtonPrimary
+        v-if="filterProjects().length > 6"
+        class="portfolio__button"
+        @click="handleButtonClick"
+        >{{ allShown ? 'See less' : 'See more' }}</ButtonPrimary
+      >
     </div>
   </div>
 </template>
