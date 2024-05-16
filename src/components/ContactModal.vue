@@ -1,7 +1,7 @@
 <script setup>
 import '../assets/scss/components/contact-modal.scss';
 import ContactList from './ContactList.vue';
-import { defineProps, defineEmits, ref } from 'vue';
+import { ref } from 'vue';
 import { onClickOutside } from '@vueuse/core';
 
 defineProps({
