@@ -1,13 +1,30 @@
 <script setup>
+import { ref } from 'vue';
 import '../assets/scss/layouts/header.scss';
 import ButtonPrimary from '../components/ButtonPrimary.vue';
-import HeaderDropdown from '../components/HeaderDropdown.vue';
+import AppDropdown from '../components/AppDropdown.vue';
+import { setToLocalStorage, getFromLocalStorage } from '../utils/storageUtils';
 
 defineProps({
   showButton: Boolean
 });
 
 const emit = defineEmits(['openModal']);
+
+const languages = ['eng', 'esp', 'rus'];
+const currentLang = ref(getFromLocalStorage('lang') || 'eng');
+
+const updateLangOptions = () => {
+  return languages.filter((lang) => lang !== currentLang.value);
+};
+
+const langOptions = ref(updateLangOptions());
+
+const setCurrentLang = (current) => {
+  currentLang.value = current;
+  setToLocalStorage('lang', current);
+  langOptions.value = updateLangOptions();
+};
 </script>
 
 <template>
@@ -17,7 +34,7 @@ const emit = defineEmits(['openModal']);
         <img src="../assets/images/icons/logo.svg" alt="Lixe logo" />
       </div>
       <div class="header__right-part">
-        <HeaderDropdown />
+        <AppDropdown @setCurrent="setCurrentLang" :heading="currentLang" :options="langOptions" />
         <ButtonPrimary isHidden v-if="showButton" v-motion-roll-top @click="emit('openModal')"
           >Start the project</ButtonPrimary
         >
