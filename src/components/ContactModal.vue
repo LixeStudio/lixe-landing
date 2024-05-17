@@ -1,12 +1,10 @@
 <script setup>
 import '../assets/scss/components/contact-modal.scss';
-import ContactList from './ContactList.vue';
+import CloseButton from './CloseButton.vue';
+import ContactSection from './ContactSection.vue';
+import ContactForm from './ContactForm.vue';
 import { ref } from 'vue';
 import { onClickOutside } from '@vueuse/core';
-
-defineProps({
-  isOpen: Boolean
-});
 
 const emit = defineEmits(['closeModal']);
 
@@ -15,16 +13,12 @@ onClickOutside(target, () => emit('closeModal'));
 </script>
 
 <template>
-  <div v-if="isOpen" class="contact-modal">
+  <div class="contact-modal">
     <div class="contact-modal__container" ref="target">
-      <div class="contact-modal__content">
-        <div class="contact-modal__top-part">
-          <h2 class="contact-modal__title">Contact us</h2>
-          <ContactList class="contact-modal__contacts" theme="light" />
-        </div>
-        <slot />
-      </div>
       <CloseButton @close="emit('closeModal')" />
+      <ContactSection>
+        <ContactForm @closeModal="emit('closeModal')" isModal="true" />
+      </ContactSection>
     </div>
   </div>
 </template>

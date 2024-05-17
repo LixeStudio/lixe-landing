@@ -3,7 +3,6 @@ import AppHeader from './layouts/AppHeader.vue';
 import HeroSection from './components/HeroSection.vue';
 import PortfolioSection from './components/PortfolioSection.vue';
 import ContactModal from './components/ContactModal.vue';
-import ContactForm from './components/ContactForm.vue';
 import AppFooter from './layouts/AppFooter.vue';
 import { ref } from 'vue';
 
@@ -17,15 +16,12 @@ const isModalOpened = ref(false);
 
 const openModal = () => {
   isModalOpened.value = true;
+  document.body.style.overflow = 'hidden';
 };
 
 const closeModal = () => {
   isModalOpened.value = false;
-};
-
-const handleSubmit = () => {
-  console.log('Submit');
-  closeModal();
+  document.body.style.overflow = 'auto';
 };
 </script>
 
@@ -38,9 +34,7 @@ const handleSubmit = () => {
     </main>
     <AppFooter @openModal="openModal" />
     <Transition>
-      <ContactModal :isOpen="isModalOpened" @closeModal="closeModal">
-        <ContactForm @closeModal="closeModal" @handleSubmit="handleSubmit" />
-      </ContactModal>
+      <ContactModal v-if="isModalOpened" @closeModal="closeModal" />
     </Transition>
   </div>
 </template>

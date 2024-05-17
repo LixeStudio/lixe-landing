@@ -23,28 +23,6 @@
   box-shadow: 0 2px 8px rgba($dark, 0.5);
 }
 
-
-.contact-modal__content {
-  @include flex(column);
-  gap: 40px;
-}
-
-.contact-modal__top-part {
-  @include flex(column);
-  gap: 20px;
-}
-
-.contact-modal__title {
-  font-family: 'Random Grotesque';
-  @include font(90px, 500, 94px);
-  color: $dark-2;
-}
-
-.contact-modal__contacts {
-  @include flex(row);
-  gap: 30px;
-}
-
 @media screen and (max-width: $desktop-sm) {
   .contact-modal__container {
     width: 100%;
@@ -60,14 +38,5 @@
     height: 100%;
     border-radius: 0;
     padding: 60px 16px;
-  }
-
-  .contact-modal__title {
-    @include font(56px, 500, 60px);
-  }
-
-  .contact-modal__contacts {
-    @include flex(column);
-    gap: 20px;
   }
 }

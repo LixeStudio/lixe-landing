@@ -2,11 +2,19 @@
 import '../assets/scss/components/contact-form.scss';
 import ButtonPrimary from '../components/ButtonPrimary.vue';
 
-const emit = defineEmits(['closeModal', 'handleSubmit']);
+const props = defineProps(['isModal']);
+const emit = defineEmits(['closeModal']);
+
+const handleSubmit = () => {
+  console.log('Submit');
+  if (props.isModal) {
+    emit('closeModal');
+  }
+};
 </script>
 
 <template>
-  <form class="contact-form" @submit.prevent="emit('handleSubmit')" novalidate>
+  <form class="contact-form" @submit.prevent="handleSubmit" novalidate>
     <div class="contact-form__fields">
       <div>
         <label class="contact-form__label" for="name">My name is</label
@@ -15,7 +23,6 @@ const emit = defineEmits(['closeModal', 'handleSubmit']);
           type="text"
           id="name"
           placeholder="Enter your name here"
-          autofocus
         />
       </div>
       <div>
