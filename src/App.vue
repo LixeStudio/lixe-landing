@@ -1,6 +1,7 @@
 <script setup>
 import AppHeader from './layouts/AppHeader.vue';
 import HeroSection from './components/HeroSection.vue';
+import PortfolioSection from './components/PortfolioSection.vue';
 import ContactModal from './components/ContactModal.vue';
 import ContactForm from './components/ContactForm.vue';
 import AppFooter from './layouts/AppFooter.vue';
@@ -33,7 +34,7 @@ const handleSubmit = () => {
     <AppHeader :showButton="showButton" @openModal="openModal" />
     <main>
       <HeroSection @setShowButton="setShowButton" @openModal="openModal" />
-      <div :style="{ height: '1000px' }"></div>
+      <PortfolioSection />
     </main>
     <AppFooter @openModal="openModal" />
     <Transition>

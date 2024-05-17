@@ -21,8 +21,8 @@ const calculateTransformOrigin = (e) => {
 <template>
   <div
     class="button-with-arrow"
-    @mouseenter="(e) => calculateTransformOrigin(e)"
-    @mouseleave="(e) => calculateTransformOrigin(e)"
+    @mouseenter="calculateTransformOrigin"
+    @mouseleave="calculateTransformOrigin"
   >
     <span
       class="button-with-arrow__text"
