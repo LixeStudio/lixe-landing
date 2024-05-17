@@ -1,0 +1,44 @@
+@use '../utils' as *;
+
+.gallery__container {
+  @include padding-horizontal($padding-hr-desktop);
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+.gallery__image {
+  max-height: 680px;
+  width: 100%;
+  border-radius: 12px;
+
+  &:last-child:nth-child(odd) {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media screen and (max-width: $desktop-md) {
+  .gallery__container {
+    @include padding-horizontal(0);
+  }
+
+  .gallery__image {
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .gallery__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery__image {
+    &:last-child:nth-child(odd) {
+      grid-column: 1 / span 1;
+    }
+  }
+}
