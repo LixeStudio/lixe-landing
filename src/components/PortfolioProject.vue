@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import '../assets/scss/components/portfolio-project.scss';
+import DetailsModal from '../components/DetailsModal.vue';
 
 defineProps(['project']);
 
@@ -17,7 +18,17 @@ const handleMouseMove = (e) => {
   circle.value.style.transform = `translateX(${x}px) translateY(${y}px)`;
 };
 
-const handleClick = () => {};
+const isModalOpened = ref(false);
+
+const openModal = () => {
+  isModalOpened.value = true;
+  document.body.style.overflow = 'hidden';
+};
+
+const closeModal = () => {
+  isModalOpened.value = false;
+  document.body.style.overflow = 'auto';
+};
 </script>
 
 <template>
@@ -30,7 +41,7 @@ const handleClick = () => {};
     :duration="1200"
     ref="container"
     @mousemove="handleMouseMove"
-    @click="handleClick"
+    @click="openModal"
   >
     <div class="portfolio__circle" ref="circle">
       <div class="portfolio__circle-inner">View</div>
@@ -47,4 +58,7 @@ const handleClick = () => {};
       </div>
     </div>
   </div>
+  <Transition>
+    <DetailsModal v-if="isModalOpened" @closeModal="closeModal" :project="project" />
+  </Transition>
 </template>

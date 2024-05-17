@@ -52,7 +52,7 @@ const handleButtonClick = () => {
 </script>
 
 <template>
-  <div class="portfolio">
+  <section class="portfolio">
     <div class="portfolio__container">
       <h2 class="portfolio__title">See Our Projects</h2>
       <div class="portfolio__top-panel">
@@ -76,16 +76,16 @@ const handleButtonClick = () => {
       <div class="portfolio__projects">
         <div class="portfolio__projects-column">
           <PortfolioProject
-            v-for="{ id, image, title, shortDescription, tags } in evenFilteredProjects"
-            :key="id"
-            :project="{ image, title, shortDescription, tags }"
+            v-for="project in evenFilteredProjects"
+            :key="project.id"
+            :project="project"
           />
         </div>
         <div class="portfolio__projects-column portfolio__projects-column_right">
           <PortfolioProject
-            v-for="{ id, image, title, shortDescription, tags } in oddFilteredProjects"
-            :key="id"
-            :project="{ image, title, shortDescription, tags }"
+            v-for="project in oddFilteredProjects"
+            :key="project.id"
+            :project="project"
           />
         </div>
       </div>
@@ -96,5 +96,5 @@ const handleButtonClick = () => {
         >{{ allShown ? 'See less' : 'See more' }}</ButtonPrimary
       >
     </div>
-  </div>
+  </section>
 </template>
