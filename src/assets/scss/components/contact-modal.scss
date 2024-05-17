@@ -23,14 +23,6 @@
   box-shadow: 0 2px 8px rgba($dark, 0.5);
 }
 
-.contact-modal__close-button {
-  position: absolute;
-  top: 16px;
-  right: 20px;
-  @include flex(column, center, center);
-  @include size(48px);
-  cursor: pointer;
-}
 
 .contact-modal__content {
   @include flex(column);

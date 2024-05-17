@@ -17,9 +17,6 @@ onClickOutside(target, () => emit('closeModal'));
 <template>
   <div v-if="isOpen" class="contact-modal">
     <div class="contact-modal__container" ref="target">
-      <div class="contact-modal__close-button" @click.stop="$emit('closeModal')">
-        <img src="../assets/images/icons/close.svg" alt="Close" />
-      </div>
       <div class="contact-modal__content">
         <div class="contact-modal__top-part">
           <h2 class="contact-modal__title">Contact us</h2>
@@ -27,6 +24,7 @@ onClickOutside(target, () => emit('closeModal'));
         </div>
         <slot />
       </div>
+      <CloseButton @close="emit('closeModal')" />
     </div>
   </div>
 </template>
