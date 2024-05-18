@@ -13,6 +13,10 @@
     transform: scale(1);
     opacity: 1;
   }
+
+  &:nth-child(even) {
+    top: 210px;
+  }
 }
 
 .portfolio__project-box {
@@ -62,6 +66,14 @@
   opacity: 0;
   transform: scale(0);
   overflow: hidden;
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .portfolio__project {
+    &:nth-child(even) {
+      top: 0;
+    }
+  }
 }
 
 @media screen and (max-width: $mobile) {

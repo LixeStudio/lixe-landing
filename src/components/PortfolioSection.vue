@@ -25,18 +25,9 @@ const filterProjects = () => {
   return projects.filter((project) => project.type.includes(currentTab.value));
 };
 
-const sliceProjects = (projects) => {
-  return allShown.value ? projects : projects.slice(0, 6);
-};
-
-const evenFilteredProjects = computed(() => {
+const sliceProjects = computed(() => {
   const filteredProjects = filterProjects();
-  return sliceProjects(filteredProjects).filter((project, index) => index % 2 === 0);
-});
-
-const oddFilteredProjects = computed(() => {
-  const filteredProjects = filterProjects();
-  return sliceProjects(filteredProjects).filter((project, index) => index % 2 === 1);
+  return allShown.value ? filteredProjects : filteredProjects.slice(0, 6);
 });
 
 const currentSort = ref('');
@@ -74,20 +65,7 @@ const handleButtonClick = () => {
         />
       </div>
       <div class="portfolio__projects">
-        <div class="portfolio__projects-column">
-          <PortfolioProject
-            v-for="project in evenFilteredProjects"
-            :key="project.id"
-            :project="project"
-          />
-        </div>
-        <div class="portfolio__projects-column portfolio__projects-column_right">
-          <PortfolioProject
-            v-for="project in oddFilteredProjects"
-            :key="project.id"
-            :project="project"
-          />
-        </div>
+        <PortfolioProject v-for="project in sliceProjects" :key="project.id" :project="project" />
       </div>
       <ButtonPrimary
         v-if="filterProjects().length > 6"
