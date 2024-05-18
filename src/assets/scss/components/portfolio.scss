@@ -27,15 +27,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   column-gap: 8%;
-}
-
-.portfolio__projects-column {
-  @include flex(column);
-  gap: 80px;
-}
-
-.portfolio__projects-column_right {
-  padding-top: 210px;
+  row-gap: 80px;
 }
 
 .portfolio__button {
@@ -51,10 +43,6 @@
   .portfolio__projects {
     grid-template-columns: 1fr;
     gap: 80px;
-  }
-
-  .portfolio__projects-column_right {
-    padding-top: 0px;
   }
 
   .portfolio__top-panel {

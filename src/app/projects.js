@@ -1,6 +1,7 @@
 import greenEvolutionImage from '../assets/images/projects-images/green-evolution/main-image.png';
 import greenEvolutionLogo from '../assets/images/projects-images/green-evolution/logo.svg';
 import greenEvolutionModalImage from '../assets/images/projects-images/green-evolution/macbook-pro-16.png';
+import clientPhoto from '../assets/images/projects-images/green-evolution/client-photo.png';
 
 export const projects = [
   {
@@ -20,6 +21,7 @@ export const projects = [
     modalImage: greenEvolutionModalImage,
     clientFeedback: {
       clientName: 'Ethan Parker',
+      clientPhoto: clientPhoto,
       clientDetails: 'Founder, Green Evolution Technologies',
       clientQuote:
         '“As far as our cooperation is concerned, I am very satisfied. Literally everyone likes the website and everyone says it looks professional. The logo is also amazing.”'
@@ -44,6 +46,7 @@ export const projects = [
     modalImage: greenEvolutionModalImage,
     clientFeedback: {
       clientName: 'Ethan Parker',
+      clientPhoto: clientPhoto,
       clientDetails: 'Founder, Green Evolution Technologies',
       clientQuote:
         '“As far as our cooperation is concerned, I am very satisfied. Literally everyone likes the website and everyone says it looks professional. The logo is also amazing.”'
@@ -68,6 +71,7 @@ export const projects = [
     modalImage: greenEvolutionModalImage,
     clientFeedback: {
       clientName: 'Ethan Parker',
+      clientPhoto: clientPhoto,
       clientDetails: 'Founder, Green Evolution Technologies',
       clientQuote:
         '“As far as our cooperation is concerned, I am very satisfied. Literally everyone likes the website and everyone says it looks professional. The logo is also amazing.”'
@@ -92,6 +96,7 @@ export const projects = [
     modalImage: greenEvolutionModalImage,
     clientFeedback: {
       clientName: 'Ethan Parker',
+      clientPhoto: clientPhoto,
       clientDetails: 'Founder, Green Evolution Technologies',
       clientQuote:
         '“As far as our cooperation is concerned, I am very satisfied. Literally everyone likes the website and everyone says it looks professional. The logo is also amazing.”'
@@ -116,6 +121,7 @@ export const projects = [
     modalImage: greenEvolutionModalImage,
     clientFeedback: {
       clientName: 'Ethan Parker',
+      clientPhoto: clientPhoto,
       clientDetails: 'Founder, Green Evolution Technologies',
       clientQuote:
         '“As far as our cooperation is concerned, I am very satisfied. Literally everyone likes the website and everyone says it looks professional. The logo is also amazing.”'
@@ -140,6 +146,7 @@ export const projects = [
     modalImage: greenEvolutionModalImage,
     clientFeedback: {
       clientName: 'Ethan Parker',
+      clientPhoto: clientPhoto,
       clientDetails: 'Founder, Green Evolution Technologies',
       clientQuote:
         '“As far as our cooperation is concerned, I am very satisfied. Literally everyone likes the website and everyone says it looks professional. The logo is also amazing.”'
@@ -164,6 +171,7 @@ export const projects = [
     modalImage: greenEvolutionModalImage,
     clientFeedback: {
       clientName: 'Ethan Parker',
+      clientPhoto: clientPhoto,
       clientDetails: 'Founder, Green Evolution Technologies',
       clientQuote:
         '“As far as our cooperation is concerned, I am very satisfied. Literally everyone likes the website and everyone says it looks professional. The logo is also amazing.”'
@@ -188,6 +196,7 @@ export const projects = [
     modalImage: greenEvolutionModalImage,
     clientFeedback: {
       clientName: 'Ethan Parker',
+      clientPhoto: clientPhoto,
       clientDetails: 'Founder, Green Evolution Technologies',
       clientQuote:
         '“As far as our cooperation is concerned, I am very satisfied. Literally everyone likes the website and everyone says it looks professional. The logo is also amazing.”'
@@ -212,6 +221,7 @@ export const projects = [
     modalImage: greenEvolutionModalImage,
     clientFeedback: {
       clientName: 'Ethan Parker',
+      clientPhoto: clientPhoto,
       clientDetails: 'Founder, Green Evolution Technologies',
       clientQuote:
         '“As far as our cooperation is concerned, I am very satisfied. Literally everyone likes the website and everyone says it looks professional. The logo is also amazing.”'
