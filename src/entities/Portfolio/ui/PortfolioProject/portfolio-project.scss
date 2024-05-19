@@ -1,0 +1,96 @@
+@use '../../../../app/assets/scss/utils' as *;
+
+.portfolio__project {
+  @include flex(column, flex-start, flex-start);
+  gap: 16px;
+  height: min-content;
+  cursor: none;
+  touch-action: none;
+  position: relative;
+  overflow: hidden;
+
+  &:hover .portfolio__circle-inner {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &:nth-child(even) {
+    top: 210px;
+  }
+
+  &:nth-child(even):last-child {
+    margin-bottom: 210px;
+  }
+}
+
+.portfolio__project-box {
+  @include flex(column);
+  gap: 12px;
+}
+
+.portfolio__project-image {
+  border-radius: 12px;
+  width: 100%;
+}
+
+.portfolio__project-title {
+  @include font(28px, 500, 36px);
+}
+
+.portfolio__project-description {
+  @include font(16px, 400, 23px);
+  color: $dark-4;
+}
+
+.portfolio__project-tag,
+.portfolio__project-tags {
+  @include flex(row, flex-start, center);
+  gap: 8px;
+}
+
+.portfolio__project-tag-circle {
+  @include circle(4px, $dark-4);
+}
+
+.portfolio__circle {
+  position: absolute;
+  backface-visibility: hidden;
+  pointer-events: none;
+}
+
+.portfolio__circle-inner {
+  @include circle(140px, $white);
+  @include flex(column, center, center);
+  font-family: 'Random Grotesque';
+  @include font(16px 500, 23px);
+  transition-property: opacity, transform;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  text-transform: uppercase;
+  opacity: 0;
+  transform: scale(0);
+  overflow: hidden;
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .portfolio__project {
+    &:nth-child(even) {
+      top: 0;
+    }
+
+    &:nth-child(even):last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .portfolio__project-title {
+    @include font(18px, 600, 26px);
+    font-family: 'Manrope', sans-serif;
+  }
+
+  .portfolio__project-tag {
+    @include font(14px, 400, 20px);
+  }
+}

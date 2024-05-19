@@ -1,0 +1,59 @@
+@use '../../../../app/assets/scss/utils' as *;
+
+.contact {
+  @include flex(column);
+  gap: 40px;
+}
+
+.contact__top-part {
+  @include flex(column);
+  gap: 20px;
+}
+
+.contact__title {
+  font-family: 'Random Grotesque';
+  @include font(90px, 500, 94px);
+  color: $dark-2;
+}
+
+.contact__contacts {
+  @include flex(row);
+  gap: 30px;
+}
+
+.contact-form {
+  @include flex(column);
+  gap: 40px;
+}
+
+.contact-form__fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 20px;
+  row-gap: 12px;
+}
+
+.contact-form__button {
+  min-width: 210px;
+}
+
+@media screen and (max-width: $tablet) {
+  .contact__title {
+    @include font(56px, 500, 60px);
+  }
+
+  .contact__contacts {
+    @include flex(column);
+    gap: 20px;
+  }
+
+  .contact-form__fields {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form__button {
+    min-width: none;
+    width: 100%;
+  }
+}

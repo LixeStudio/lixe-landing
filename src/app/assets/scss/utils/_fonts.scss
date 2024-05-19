@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Random Grotesque';
+  src:
+    url('@/app/assets/fonts/random-grotesque/RG-StandardMedium.woff'),
+    format('woff'),
+    url('@/app/assets/fonts/random-grotesque/RG-StandardMedium.woff2'),
+    format('woff2'),
+    url('@/app/assets/fonts/random-grotesque/RG-StandardMedium.ttf') format('truetype'),
+    url('@/app/assets/fonts/random-grotesque/RG-StandardMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}

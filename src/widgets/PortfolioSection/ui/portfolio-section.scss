@@ -1,0 +1,24 @@
+@use '../../../app/assets/scss/utils' as *;
+
+.portfolio__container {
+  @include padding-horizontal($padding-hr-desktop);
+  @include padding-vertical(60px);
+  @include flex(column);
+  gap: 40px;
+}
+
+.portfolio__title {
+  @include font(56px, 500, 60px);
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .portfolio__container {
+    @include padding-horizontal($padding-hr-tablet);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .portfolio__container {
+    @include padding-horizontal($padding-hr-mobile);
+  }
+}
