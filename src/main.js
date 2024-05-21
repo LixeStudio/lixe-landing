@@ -1,9 +1,2 @@
-import './assets/scss/main.scss';
-import App from './App.vue';
-import { MotionPlugin } from '@vueuse/motion';
-
-import { createApp } from 'vue';
-const app = createApp(App);
-app.use(MotionPlugin);
-
+import { app } from '@/app';
 app.mount('#app');

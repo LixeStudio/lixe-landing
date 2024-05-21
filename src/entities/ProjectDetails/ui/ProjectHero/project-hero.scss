@@ -1,0 +1,52 @@
+@use '../../../../app/assets/scss/utils' as *;
+
+.project-hero {
+  background-color: $gray-6;
+}
+
+.project-hero__container {
+  @include flex(column);
+  gap: 80px;
+  padding-top: 120px;
+}
+
+.project-hero__content {
+  max-width: 1140px;
+  @include flex(column, center, center);
+  align-self: center;
+  gap: 24px;
+  @include padding-horizontal($padding-hr-desktop);
+}
+
+.project-hero__title {
+  @include font(90px, 500, 94px);
+  text-align: center;
+}
+
+@media screen and (max-width: $desktop-md) {
+  .project-hero__container {
+    padding-top: 70px;
+  }
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .project-hero__content {
+    @include padding-horizontal($padding-hr-tablet);
+  }
+
+  .project-hero__title {
+    @include font(56px, 500, 60px);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .project-hero__content {
+    @include padding-horizontal($padding-hr-mobile);
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .project-hero__title {
+    @include font(42px, 500, 50px);
+  }
+}
