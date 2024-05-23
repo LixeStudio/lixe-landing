@@ -1,0 +1,65 @@
+@use '../../../../app/assets/scss/utils' as *;
+
+.lang-dropdown {
+  @include size(70px, 37px);
+}
+
+.lang-dropdown__container {
+  @include size(100%);
+  transition: all 0.2s ease-in;
+  background-color: $white;
+  border-radius: 20px;
+  overflow: hidden;
+  @include padding-horizontal(12px);
+
+  &.lang-dropdown__container_opened {
+    height: 110px;
+  }
+}
+
+.lang-dropdown__button {
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.lang-dropdown__item {
+  @include font(16px, 500, 22px);
+  font-family: 'Random Grotesque';
+  cursor: pointer;
+  transition: color 0.5s ease;
+  text-wrap: nowrap;
+
+  &:hover {
+    color: $dark;
+  }
+}
+
+.lang-dropdown__item_active {
+  @include flex(row);
+  gap: 8px;
+  text-transform: uppercase;
+
+  &::after {
+    content: url(../../assets/icons/chevron-down.svg);
+    position: relative;
+    bottom: 1px;
+    transition: all 0.4s ease;
+  }
+
+  &.lang-dropdown__icon-rotate::after {
+    transform: rotate(-180deg);
+    bottom: 0;
+  }
+}
+
+.lang-dropdown__items {
+  @include flex(column);
+  gap: 8px;
+  color: $dark-5;
+  text-transform: uppercase;
+}
+
+.lang-dropdown__line {
+  height: 1px;
+  background-color: $dark-6;
+}
