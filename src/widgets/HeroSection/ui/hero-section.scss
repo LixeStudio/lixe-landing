@@ -10,6 +10,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   gap: 20px;
+  min-height: 282px;
 }
 
 .hero__title {
@@ -58,6 +59,10 @@
     @include font(56px, 500, 60px);
     min-width: auto;
     max-width: 340px;
+  }
+
+  .hero__content {
+    min-height: auto;
   }
 }
 

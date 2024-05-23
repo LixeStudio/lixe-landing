@@ -4,8 +4,8 @@ import './hero-list.scss';
 
 <template>
   <ul class="hero__list">
-    <li class="hero__list-item">Innovation</li>
-    <li class="hero__list-item">Web Solutions</li>
-    <li class="hero__list-item">Functionality</li>
+    <li class="hero__list-item">{{ $t('translation.hero.list.first') }}</li>
+    <li class="hero__list-item">{{ $t('translation.hero.list.second') }}</li>
+    <li class="hero__list-item">{{ $t('translation.hero.list.third') }}</li>
   </ul>
 </template>

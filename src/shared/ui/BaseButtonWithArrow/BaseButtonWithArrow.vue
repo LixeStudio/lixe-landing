@@ -24,7 +24,7 @@ const setTransformOrigin = (e) => {
       :class="{
         'button-with-arrow__text_hidden': isHidden
       }"
-      >Start the project</span
+      >{{ $t('translation.hero.buttonText') }}</span
     >
     <div
       class="button-with-arrow__circle"

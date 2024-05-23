@@ -18,9 +18,9 @@ const emit = defineEmits(['openModal']);
       </div>
       <div class="header__right-part">
         <LangDropdown />
-        <BaseButton isHidden v-if="showButton" v-motion-roll-top @click="emit('openModal')"
-          >Start the project</BaseButton
-        >
+        <BaseButton isHidden v-if="showButton" v-motion-pop @click="emit('openModal')">{{
+          $t('translation.header.buttonText')
+        }}</BaseButton>
       </div>
     </div>
   </header>

@@ -3,8 +3,9 @@ import './portfolio-controls.scss';
 import { computed, ref } from 'vue';
 import { BaseTab } from '@/shared/ui';
 import { PortfolioProject } from '@/entities/Portfolio';
-import { BaseDropdown } from '@/shared/ui';
+import { SortDropdown } from '@/entities/Portfolio';
 import { BaseButton } from '@/shared/ui';
+import { tabs } from '../../constants/tabs';
 
 const props = defineProps({
   projects: Object
@@ -12,17 +13,6 @@ const props = defineProps({
 
 const allShown = ref(false);
 const currentTab = ref('');
-
-const tabs = [
-  'e-commerce',
-  'lorem ipsum',
-  'e-lorem',
-  'lorem ipsum dolor',
-  'orci sagittis magna',
-  'euismod',
-  'purus arcu tellus',
-  'purus arcu'
-];
 
 const filterProjects = () => {
   return props.projects.filter((project) => project.type.includes(currentTab.value));
@@ -34,7 +24,6 @@ const sliceProjects = computed(() => {
 });
 
 const currentSort = ref('');
-const sortOptions = ref(['Newest to Oldest', 'Oldest to Newest']);
 
 const setCurrentSort = (current) => {
   currentSort.value = current;
@@ -53,12 +42,7 @@ const setCurrentSort = (current) => {
         {{ tab }}
       </BaseTab>
     </div>
-    <BaseDropdown
-      withWidthTransition="true"
-      heading="Sort by"
-      :options="sortOptions"
-      @setCurrent="setCurrentSort"
-    />
+    <SortDropdown :currentSort="currentSort" @setCurrentSort="setCurrentSort" />
   </div>
   <div class="portfolio__projects">
     <PortfolioProject v-for="project in sliceProjects" :key="project.id" :project="project" />
@@ -67,6 +51,10 @@ const setCurrentSort = (current) => {
     v-if="filterProjects().length > 6"
     class="portfolio__button"
     @click="allShown = !allShown"
-    >{{ allShown ? 'See less' : 'See more' }}</BaseButton
+    >{{
+      allShown
+        ? $t('translation.portfolio.buttonText.seeLess')
+        : $t('translation.portfolio.buttonText.seeMore')
+    }}</BaseButton
   >
 </template>

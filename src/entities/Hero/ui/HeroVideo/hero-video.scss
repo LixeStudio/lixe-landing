@@ -2,16 +2,16 @@
 
 .hero__video-wrapper {
   clip-path: polygon(
-    20% 0,
+    25% 0,
     100% 0,
     100% 35%,
     100% 85%,
-    65% 85%,
-    65% 100%,
+    60% 85%,
+    60% 100%,
     0 100%,
     0% 70%,
     0 20%,
-    20% 20%
+    25% 20%
   );
   height: 410px;
   overflow: hidden;
@@ -33,6 +33,23 @@
   object-fit: cover;
   background-position: 50%;
   background-size: cover;
+}
+
+@media screen and (max-width: $desktop-md) {
+  .hero__video-wrapper {
+    clip-path: polygon(
+      25% 0,
+      100% 0,
+      100% 35%,
+      100% 85%,
+      63% 85%,
+      63% 100%,
+      0 100%,
+      0% 70%,
+      0 20%,
+      25% 20%
+    );
+  }
 }
 
 @media screen and (max-width: $tablet) {
