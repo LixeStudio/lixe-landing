@@ -7,7 +7,7 @@ import { PortfolioControls } from '@/features/ShowProjects';
 <template>
   <section class="portfolio">
     <div class="portfolio__container">
-      <h2 class="portfolio__title">See Our Projects</h2>
+      <h2 class="portfolio__title">{{ $t('translation.portfolio.title') }}</h2>
       <PortfolioControls :projects="projects" />
     </div>
   </section>
