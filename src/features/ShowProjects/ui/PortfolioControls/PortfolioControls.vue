@@ -5,6 +5,7 @@ import { BaseTab } from '@/shared/ui';
 import { PortfolioProject } from '@/entities/Portfolio';
 import { SortDropdown } from '@/entities/Portfolio';
 import { BaseButton } from '@/shared/ui';
+import { tabs } from '../../constants/tabs';
 
 const props = defineProps({
   projects: Object
@@ -12,17 +13,6 @@ const props = defineProps({
 
 const allShown = ref(false);
 const currentTab = ref('');
-
-const tabs = [
-  'e-commerce',
-  'lorem ipsum',
-  'e-lorem',
-  'lorem ipsum dolor',
-  'orci sagittis magna',
-  'euismod',
-  'purus arcu tellus',
-  'purus arcu'
-];
 
 const filterProjects = () => {
   return props.projects.filter((project) => project.type.includes(currentTab.value));
