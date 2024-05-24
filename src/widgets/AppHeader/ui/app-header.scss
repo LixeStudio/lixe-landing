@@ -24,6 +24,10 @@
   @include flex(row, center, center);
 }
 
+.header__button {
+  background-color: $white;
+}
+
 @media screen and (max-width: $desktop-sm) {
   .header__container {
     @include padding-horizontal($padding-hr-tablet);
