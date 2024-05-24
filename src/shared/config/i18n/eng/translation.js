@@ -30,5 +30,15 @@ export const translationEng = {
     description: 'Contact us now to discuss your project.',
     paragraph: 'Creative digital production',
     copyright: '© 2024 Lixe.studio. All rights reserved'
+  },
+  contactModal: {
+    title: 'Contact Us',
+    nameLabel: 'My name is',
+    namePlaceholder: 'Enter your name here',
+    emailLabel: 'Here is my email',
+    emailPlaceholder: 'Enter your name here',
+    detailsLabel: 'I’m looking for',
+    detailsPlaceholder: 'Enter your project details here',
+    buttonText: 'Send'
   }
 };

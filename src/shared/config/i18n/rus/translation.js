@@ -30,5 +30,15 @@ export const translationRus = {
     description: 'Свяжитесь с нами, чтобы обсудить ваш проект.',
     paragraph: 'Креативное цифровое производство',
     copyright: '© 2024 Lixe.studio. Все права защищены'
+  },
+  contactModal: {
+    title: 'Контакты',
+    nameLabel: 'Меня зовут',
+    namePlaceholder: 'Введите ваше имя здесь',
+    emailLabel: 'Вот моя почта',
+    emailPlaceholder: 'Введите вашу почту здесь',
+    detailsLabel: 'Я ищу',
+    detailsPlaceholder: 'Введите детали вашего проекта здесь',
+    buttonText: 'Отправить'
   }
 };
