@@ -30,6 +30,10 @@
 @media screen and (max-width: $desktop-sm) {
   .contact-modal__container {
     width: 100%;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
   }
 }
 
