@@ -24,10 +24,26 @@ const openModal = inject('openModal');
   <div
     class="portfolio__project"
     v-motion
-    :initial="{ opacity: 0, y: 100 }"
-    :visible-once="{ opacity: 1, y: 0, scale: 1 }"
-    :delay="200"
-    :duration="1200"
+    :initial="{ y: 40, scale: 1 }"
+    :visible-once="{
+      y: 0,
+      scale: 1,
+      transition: {
+        scale: {
+          duration: 300
+        },
+        duration: 1000,
+        delay: 200,
+        type: 'keyframes',
+        ease: 'ease'
+      }
+    }"
+    :hovered="{
+      scale: 1.01,
+      transition: {
+        duration: 300
+      }
+    }"
     ref="container"
     @mousemove="handleMouseMove"
     @click="openModal(project)"

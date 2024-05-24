@@ -14,7 +14,19 @@ const emit = defineEmits(['closeModal']);
 </script>
 
 <template>
-  <div class="details-modal">
+  <div
+    class="details-modal"
+    v-motion
+    :initial="{ y: 1000 }"
+    :enter="{
+      y: 0,
+      transition: {
+        duration: 800,
+        type: 'keyframes',
+        ease: 'easeOut'
+      }
+    }"
+  >
     <div class="details-modal__container">
       <BaseCloseButton @close="emit('closeModal')" />
       <ProjectHero
