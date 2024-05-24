@@ -12,7 +12,6 @@
   border-bottom: 1px solid $dark;
   @include padding-vertical(20px);
   resize: vertical;
-  min-height: 63px;
   height: 63px;
 
   &::placeholder {
