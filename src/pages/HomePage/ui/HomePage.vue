@@ -1,4 +1,5 @@
 <script setup>
+import './home-page.scss';
 import { AppHeader } from '@/widgets/AppHeader';
 import { HeroSection } from '@/widgets/HeroSection';
 import { PortfolioSection } from '@/widgets/PortfolioSection';
@@ -43,7 +44,7 @@ provide('openModal', openDetailsModal);
 
 <template>
   <AppHeader :showButton="showButton" @openModal="openContactModal" />
-  <main>
+  <main class="main">
     <HeroSection @setShowButton="setShowButton" @openModal="openContactModal" />
     <PortfolioSection />
   </main>

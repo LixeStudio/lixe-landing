@@ -2,6 +2,10 @@
 
 .next-project {
   cursor: pointer;
+
+  &:hover .next-project__heading {
+    transform: scale(1.05);
+  }
 }
 
 .next-project__container {
@@ -30,6 +34,7 @@
 .next-project__heading {
   @include font(16px, 500, 23px);
   text-transform: uppercase;
+  transition: transform 0.4s ease;
 }
 
 .next-project__title {

@@ -3,7 +3,8 @@ import './hero-section.scss';
 import { BaseButtonWithArrow } from '@/shared/ui';
 import { HeroVideo } from '@/entities/Hero';
 import { HeroList } from '@/entities/Hero';
-import { onMounted, onUnmounted, ref } from 'vue';
+import { ref } from 'vue';
+import { useScrollHandler } from '@/shared/composables/useScrollHandler';
 
 const hero = ref(null);
 const emit = defineEmits(['setShowButton', 'openModal']);
@@ -19,13 +20,7 @@ const handleScroll = () => {
   }
 };
 
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
-});
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
-});
+useScrollHandler(handleScroll);
 </script>
 
 <template>
@@ -33,7 +28,21 @@ onUnmounted(() => {
     <div class="hero__container">
       <div class="hero__content">
         <h1 class="hero__title">{{ $t('translation.hero.title') }}</h1>
-        <div class="hero__details">
+        <div
+          class="hero__details"
+          v-motion
+          :initial="{ opacity: 0, y: 10 }"
+          :enter="{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 500,
+              delay: 200,
+              type: 'keyframes',
+              ease: 'easeOut'
+            }
+          }"
+        >
           <p class="hero__paragraph">
             {{ $t('translation.hero.description') }}
           </p>

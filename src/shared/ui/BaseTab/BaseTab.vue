@@ -18,7 +18,7 @@ defineProps({
     }"
   >
     <div class="tab__container">
-      <h4 class="tab__title"><slot /></h4>
+      <p class="tab__title"><slot /></p>
       <sup class="tab__number">2</sup>
     </div>
   </button>

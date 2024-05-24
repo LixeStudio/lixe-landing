@@ -1,11 +1,10 @@
 @use '../../../../app/assets/scss/utils' as *;
 
 .portfolio__project {
-  @include flex(column, flex-start, flex-start);
+  @include flex(column, flex-start);
   gap: 16px;
   height: min-content;
   cursor: none;
-  touch-action: none;
   position: relative;
   overflow: hidden;
 
@@ -74,6 +73,8 @@
 
 @media screen and (max-width: $desktop-sm) {
   .portfolio__project {
+    cursor: pointer;
+
     &:nth-child(even) {
       top: 0;
     }
@@ -81,6 +82,10 @@
     &:nth-child(even):last-child {
       margin-bottom: 0;
     }
+  }
+
+  .portfolio__circle {
+    display: none;
   }
 }
 

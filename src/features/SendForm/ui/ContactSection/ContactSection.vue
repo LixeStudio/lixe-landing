@@ -19,22 +19,30 @@ const handleSubmit = () => {
 <template>
   <section class="contact">
     <div class="contact__top-part">
-      <h2 class="contact__title">Contact us</h2>
+      <h2 class="contact__title">{{ $t('translation.contactModal.title') }}</h2>
       <ContactList class="contact__contacts" theme="light" />
     </div>
     <form class="contact-form" @submit.prevent="handleSubmit" novalidate>
       <div class="contact-form__fields">
-        <BaseFormTextField id="name" placeholder="Enter your name here"
-          >My name is</BaseFormTextField
+        <BaseFormTextField
+          id="name"
+          :placeholder="$t('translation.contactModal.namePlaceholder')"
+          >{{ $t('translation.contactModal.nameLabel') }}</BaseFormTextField
         >
-        <BaseFormTextField id="email" placeholder="Enter your email here"
-          >Here is my email</BaseFormTextField
+        <BaseFormTextField
+          id="email"
+          :placeholder="$t('translation.contactModal.emailPlaceholder')"
+          >{{ $t('translation.contactModal.emailLabel') }}</BaseFormTextField
         >
-        <BaseTextareaField id="details" placeholder="Enter your project details here"
-          >I’m looking for</BaseTextareaField
+        <BaseTextareaField
+          id="details"
+          :placeholder="$t('translation.contactModal.detailsPlaceholder')"
+          >{{ $t('translation.contactModal.detailsLabel') }}</BaseTextareaField
         >
       </div>
-      <BaseButton class="contact-form__button" type="submit">Send</BaseButton>
+      <BaseButton class="contact-form__button" type="submit">{{
+        $t('translation.contactModal.buttonText')
+      }}</BaseButton>
     </form>
   </section>
 </template>

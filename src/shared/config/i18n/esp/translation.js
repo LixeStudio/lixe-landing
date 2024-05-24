@@ -30,5 +30,15 @@ export const translationEsp = {
     description: 'Contáctanos ahora para discutir tu proyecto.',
     paragraph: 'Producción digital creativa',
     copyright: '© 2024 Lixe.studio. Todos los derechos reservados'
+  },
+  contactModal: {
+    title: 'Contác­tenos',
+    nameLabel: 'Mi nombre es',
+    namePlaceholder: 'Introduce tu nombre aquí',
+    emailLabel: 'Aquí está mi correo electrónico',
+    emailPlaceholder: 'Introduce tu correo electrónico aquí',
+    detailsLabel: 'Estoy buscando',
+    detailsPlaceholder: 'Introduce los detalles de tu proyecto aquí',
+    buttonText: 'Enviar'
   }
 };
