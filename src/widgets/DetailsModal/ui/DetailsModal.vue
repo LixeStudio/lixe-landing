@@ -37,23 +37,25 @@ const emit = defineEmits(['closeModal']);
           link: project.link
         }"
       />
-      <ProjectInfo
-        :project="{
-          title: project.title,
-          description: project.description,
-          link: project.link,
-          client: project.client,
-          scopeOfWork: project.scopeOfWork,
-          date: project.date
-        }"
-      />
-      <ProjectGallery :images="Array(3).fill(project.modalImage)" />
-      <ProjectColors :colors="project.colors" />
-      <ProjectGallery :images="Array(3).fill(project.modalImage)" />
-      <ClientFeedback :clientFeedback="project.clientFeedback" />
-      <NextProject :project="{ image: project.image }" />
       <div class="details-modal__box">
-        <ContactSection class="details-modal__contact" />
+        <ProjectInfo
+          :project="{
+            title: project.title,
+            description: project.description,
+            link: project.link,
+            client: project.client,
+            scopeOfWork: project.scopeOfWork,
+            date: project.date
+          }"
+        />
+        <ProjectGallery :images="Array(3).fill(project.modalImage)" />
+        <ProjectColors :colors="project.colors" />
+        <ProjectGallery :images="Array(3).fill(project.modalImage)" />
+        <ClientFeedback :clientFeedback="project.clientFeedback" />
+        <NextProject :project="{ image: project.image }" />
+        <div class="details-modal__contact-box">
+          <ContactSection class="details-modal__contact" />
+        </div>
       </div>
     </div>
   </div>

@@ -6,6 +6,8 @@
 }
 
 .footer__container {
+  max-width: $desktop-md;
+  margin: 0 auto;
   @include padding-horizontal($padding-hr-desktop);
   @include padding-vertical(40px);
   @include flex(row, flex-end);
