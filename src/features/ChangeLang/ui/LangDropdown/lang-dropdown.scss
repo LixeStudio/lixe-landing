@@ -40,7 +40,7 @@
   text-transform: uppercase;
 
   &::after {
-    content: url(../../assets/icons/chevron-down.svg);
+    content: url(@/shared/assets/icons/chevron-down.svg);
     position: relative;
     bottom: 1px;
     transition: all 0.4s ease;
