@@ -83,6 +83,10 @@
       margin-bottom: 0;
     }
   }
+
+  .portfolio__circle {
+    display: none;
+  }
 }
 
 @media screen and (max-width: $mobile) {
