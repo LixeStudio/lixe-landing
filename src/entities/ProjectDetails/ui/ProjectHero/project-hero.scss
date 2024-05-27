@@ -27,8 +27,9 @@
   text-align: center;
 }
 
-.project-hero__link-container {
+.project-hero__link {
   @include flex(row, center, center);
+  flex-wrap: wrap;
   gap: 8px;
   transition: transform 0.4s ease;
 
@@ -37,8 +38,9 @@
   }
 }
 
-.project-hero__link {
+.project-hero__link-text {
   @include font(18px, 600, 26px);
+  text-align: center;
 }
 
 .project-hero__icon {

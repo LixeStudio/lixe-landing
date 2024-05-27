@@ -26,12 +26,10 @@ defineProps(['project']);
             {{ project.title }}
           </h2>
         </div>
-        <div class="project-hero__link-container">
-          <a class="project-hero__link" :href="project.link" target="_blank"
-            >Green Evolution Technologies.com</a
-          >
+        <a class="project-hero__link" :href="project.link" target="_blank">
+          <span class="project-hero__link-text">Green Evolution Technologies.com</span>
           <img class="project-hero__icon" src="../../assets/icons/arrow-up-right.svg" alt="Arrow" />
-        </div>
+        </a>
       </div>
       <img class="project-hero__image" :src="project.modalImage" alt="Project image" />
     </div>
