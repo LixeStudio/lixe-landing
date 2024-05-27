@@ -13,11 +13,29 @@
   min-height: 282px;
 }
 
+.hero__title-wrapper {
+  position: relative;
+}
+
+.hero__video-background {
+  position: absolute;
+  top: 0;
+  @include size(100%);
+  object-fit: cover;
+}
+
 .hero__title {
   @include font(90px, 500, 94px);
-  min-width: 550px;
   position: relative;
-  z-index: 2;
+  mix-blend-mode: screen;
+  @include size(100%);
+  background-color: $white;
+  cursor: default;
+}
+
+.hero__title-span {
+  display: block;
+  min-width: 550px;
 }
 
 .hero__details {
@@ -57,12 +75,17 @@
 
   .hero__title {
     @include font(56px, 500, 60px);
+  }
+
+  .hero__title-span {
     min-width: auto;
     max-width: 340px;
   }
 
   .hero__content {
     min-height: auto;
+    position: relative;
+    z-index: 2;
   }
 }
 

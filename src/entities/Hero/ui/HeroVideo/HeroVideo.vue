@@ -6,7 +6,7 @@ import './hero-video.scss';
   <div class="hero__video-box">
     <div class="hero__video-wrapper">
       <video class="hero__video" autoplay loop muted>
-        <source src="../../assets/video/hero-video.mp4" type="video/mp4" />
+        <source src="@/shared/assets/video/hero-video.mp4" type="video/mp4" />
       </video>
     </div>
     <svg class="hero__video-filter-svg" xmlns="http://www.w3.org/2000/svg">

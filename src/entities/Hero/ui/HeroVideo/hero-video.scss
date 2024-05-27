@@ -28,8 +28,7 @@
 }
 
 .hero__video {
-  width: 100%;
-  height: 100%;
+  @include size(100%);
   object-fit: cover;
   background-position: 50%;
   background-size: cover;

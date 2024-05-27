@@ -27,7 +27,14 @@ useScrollHandler(handleScroll);
   <section class="hero" ref="hero">
     <div class="hero__container">
       <div class="hero__content">
-        <h1 class="hero__title">{{ $t('translation.hero.title') }}</h1>
+        <div class="hero__title-wrapper">
+          <video class="hero__video-background" autoplay loop muted>
+            <source src="@/shared/assets/video/hero-video.mp4" type="video/mp4" />
+          </video>
+          <h1 class="hero__title">
+            <span class="hero__title-span">{{ $t('translation.hero.title') }}</span>
+          </h1>
+        </div>
         <div
           class="hero__details"
           v-motion
