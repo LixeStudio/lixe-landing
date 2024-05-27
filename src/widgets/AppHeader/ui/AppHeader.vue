@@ -37,12 +37,10 @@ const motions = useMotions();
               y: 100
             }"
             :enter="{
-              y: 0,
-              width: '100%'
+              y: 0
             }"
             :leave="{
               y: -150,
-              width: '0%',
               transition: {
                 duration: 300,
                 type: 'keyframes',
