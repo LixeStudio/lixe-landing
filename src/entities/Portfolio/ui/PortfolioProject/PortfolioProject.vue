@@ -32,7 +32,7 @@ const openModal = inject('openModal');
         scale: {
           duration: 300
         },
-        duration: 1000,
+        duration: 800,
         delay: 200,
         type: 'keyframes',
         ease: 'ease'
