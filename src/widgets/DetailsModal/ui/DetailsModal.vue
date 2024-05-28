@@ -52,7 +52,9 @@ const emit = defineEmits(['closeModal']);
         <ProjectColors :colors="project.colors" />
         <ProjectGallery :images="Array(3).fill(project.modalImage)" />
         <ClientFeedback :clientFeedback="project.clientFeedback" />
-        <NextProject :project="{ image: project.image }" />
+      </div>
+      <NextProject :project="{ image: project.image }" />
+      <div class="detail-modal__box">
         <div class="details-modal__contact-box">
           <ContactSection class="details-modal__contact" />
         </div>

@@ -6,12 +6,8 @@ defineProps(['project']);
 
 <template>
   <section class="next-project">
-    <div
-      class="next-project__container"
-      :style="{
-        'background-image': `url(${project.image})`
-      }"
-    >
+    <div class="next-project__container">
+      <img class="next-project__image" :src="project.image" alt="Project image" />
       <div class="next-project__overlay"></div>
       <div class="next-project__content">
         <h4 class="next-project__heading">Go to next project</h4>

@@ -2,39 +2,46 @@
 
 .next-project {
   cursor: pointer;
+  overflow: hidden;
 
-  &:hover .next-project__heading {
+  &:hover .next-project__image {
     transform: scale(1.05);
+    transition: all 0.3s linear;
   }
 }
 
 .next-project__container {
   min-height: 260px;
   position: relative;
-  background-size: cover;
-  background-position: 50%;
   @include flex(column, center, center);
-  z-index: -1;
   @include padding-horizontal($padding-hr-desktop);
+  @include padding-vertical(55px);
+}
+
+.next-project__image {
+  position: absolute;
+  @include size(100%);
+  object-fit: cover;
+  transition: all 0.3s linear;
 }
 
 .next-project__overlay {
   position: absolute;
   @include size(100%);
   background-color: rgba($dark, 0.5);
-  z-index: -1;
 }
 
 .next-project__content {
   @include flex(column, center, center);
   gap: 28px;
   color: $white;
+  position: relative;
+  z-index: 2;
 }
 
 .next-project__heading {
   @include font(16px, 500, 23px);
   text-transform: uppercase;
-  transition: transform 0.4s ease;
 }
 
 .next-project__title {
