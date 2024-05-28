@@ -29,7 +29,7 @@ useScrollHandler(handleScroll);
       <div class="hero__content">
         <div class="hero__title-wrapper">
           <video class="hero__video-background" autoplay loop muted>
-            <source src="@/shared/assets/video/hero-video.mp4" type="video/mp4" />
+            <source src="@/shared/assets/video/hero-video-background.mp4" type="video/mp4" />
           </video>
           <h1 class="hero__title">
             <span class="hero__title-span">{{ $t('translation.hero.title') }}</span>
