@@ -7,15 +7,15 @@
   height: 37px;
   @include padding-horizontal(0);
   transition:
-    min-width 0.3s ease-in 0.4s,
-    height 0.3s ease-in 0s;
+    min-width 0.3s ease-in 0.3s,
+    height 0.1s ease-in 0s;
 
   &.sort-dropdown__container_opened {
     min-width: 250px;
     height: 110px;
     transition:
       min-width 0.3s ease-in,
-      height 0.3s ease-in 0.4s;
+      height 0.2s ease-in 0.3s;
   }
 }
 
