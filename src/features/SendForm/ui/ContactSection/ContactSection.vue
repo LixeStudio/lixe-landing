@@ -6,6 +6,7 @@ import { BaseFormTextField } from '@/shared/ui';
 import { BaseTextareaField } from '@/shared/ui';
 import { format } from 'date-fns';
 import { ref } from 'vue';
+import { sendForm } from '../../api/api';
 
 const props = defineProps(['isModal']);
 const emit = defineEmits(['closeModal']);
@@ -14,8 +15,15 @@ const name = ref('');
 const email = ref('');
 const details = ref('');
 
-const handleSubmit = () => {
-  console.log({
+const handleSubmit = async () => {
+  const data = {
+    name: name.value,
+    email: email.value,
+    details: details.value,
+    date: format(new Date(), 'yyyy-MM-dd')
+  };
+  console.log(data);
+  await sendForm({
     name: name.value,
     email: email.value,
     details: details.value,
