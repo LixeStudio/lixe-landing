@@ -1,0 +1,53 @@
+@use '../../../app/assets/scss/utils' as *;
+
+.details-modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $white;
+}
+
+.details-modal__container {
+  @include flex(column);
+  gap: 60px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.details-modal__box {
+  max-width: $desktop-md;
+  margin: 0 auto;
+  @include flex(column);
+  gap: 60px;
+}
+
+.details-modal__contact-box {
+  @include padding-horizontal($padding-hr-desktop);
+}
+
+.details-modal__contact {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .details-modal {
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+  .details-modal__contact-box {
+    @include padding-horizontal($padding-hr-tablet);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .details-modal__contact-box {
+    @include padding-horizontal($padding-hr-mobile);
+  }
+}

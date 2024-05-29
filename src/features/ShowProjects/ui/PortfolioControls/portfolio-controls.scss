@@ -1,0 +1,37 @@
+@use '../../../../app/assets/scss/utils' as *;
+
+.portfolio__projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 8%;
+  row-gap: 116px;
+  padding-bottom: 40px;
+}
+
+.portfolio__top-panel {
+  @include flex(row, space-between, flex-start);
+  gap: 100px;
+}
+
+.portfolio__tabs {
+  @include flex(row);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.portfolio__button {
+  align-self: center;
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .portfolio__projects {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  .portfolio__top-panel {
+    @include flex(column-reverse);
+    gap: 40px;
+  }
+}

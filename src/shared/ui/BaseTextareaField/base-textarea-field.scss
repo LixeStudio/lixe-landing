@@ -1,0 +1,36 @@
+@use '../../../app/assets/scss/utils' as *;
+
+.textarea-field__label {
+  color: $dark-2;
+  @include font(18px, 600, 26px);
+  display: block;
+}
+
+.textarea-field__input {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid $dark;
+  @include padding-vertical(20px);
+  resize: vertical;
+  height: 63px;
+
+  &::placeholder {
+    color: $dark-4;
+  }
+}
+
+.textarea-field {
+  grid-column: 1 / span 2;
+}
+
+@media screen and (max-width: $tablet) {
+  .textarea-field {
+    grid-column: auto;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .textarea-field__input {
+    height: auto;
+  }
+}

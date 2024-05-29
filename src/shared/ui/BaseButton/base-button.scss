@@ -1,0 +1,40 @@
+@use '../../../app/assets/scss/utils' as *;
+
+.button-primary {
+  width: min-content;
+  min-height: 46px;
+  @include flex(column, center, center);
+  @include padding-horizontal(24px);
+  border-radius: $border-radius;
+  border: 1px solid $dark;
+  cursor: pointer;
+
+  &:hover .button-primary__inner {
+    transform: translateY(-22px);
+  }
+}
+
+.button-primary__inner-wrapper {
+  overflow: hidden;
+  height: 22px;
+}
+
+.button-primary__inner {
+  @include flex(column);
+  transform: translateY(0);
+  transition: all 0.4s ease;
+}
+
+.button-primary__text {
+  font-family: 'Random Grotesque';
+  text-wrap: nowrap;
+  white-space: nowrap;
+  text-transform: uppercase;
+  @include font(16px, 500, 22px);
+}
+
+@media screen and (max-width: $mobile) {
+  .button-primary_hidden {
+    display: none;
+  }
+}

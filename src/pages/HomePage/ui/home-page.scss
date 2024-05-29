@@ -1,0 +1,6 @@
+@use '../../../app/assets/scss/utils' as *;
+
+.main {
+  max-width: $desktop-md;
+  margin: 0 auto;
+}

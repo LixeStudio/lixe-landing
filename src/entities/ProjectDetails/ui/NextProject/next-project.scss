@@ -1,0 +1,68 @@
+@use '../../../../app/assets/scss/utils' as *;
+
+.next-project {
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover .next-project__image {
+    transform: scale(1.05);
+    transition: all 0.3s linear;
+  }
+}
+
+.next-project__container {
+  min-height: 260px;
+  position: relative;
+  @include flex(column, center, center);
+  @include padding-horizontal($padding-hr-desktop);
+  @include padding-vertical(55px);
+}
+
+.next-project__image {
+  position: absolute;
+  @include size(100%);
+  object-fit: cover;
+  transition: all 0.3s linear;
+}
+
+.next-project__overlay {
+  position: absolute;
+  @include size(100%);
+  background-color: rgba($dark, 0.5);
+}
+
+.next-project__content {
+  @include flex(column, center, center);
+  gap: 28px;
+  color: $white;
+  position: relative;
+  z-index: 2;
+}
+
+.next-project__heading {
+  @include font(16px, 500, 23px);
+  text-transform: uppercase;
+}
+
+.next-project__title {
+  @include font(42px, 500, 50px);
+  text-align: center;
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .next-project__container {
+    @include padding-horizontal($padding-hr-tablet);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .next-project__container {
+    @include padding-horizontal($padding-hr-mobile);
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .next-project__title {
+    @include font(28px, 500, 36px);
+  }
+}

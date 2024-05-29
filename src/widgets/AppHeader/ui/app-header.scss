@@ -1,0 +1,41 @@
+@use '../../../app/assets/scss/utils' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  transition: transform 0.5s ease;
+}
+
+.header__container {
+  max-width: $desktop-md;
+  margin: 0 auto;
+  min-height: 80px;
+  @include flex(row, space-between, center);
+  @include padding-horizontal($padding-hr-desktop);
+}
+
+.header__right-part {
+  @include flex(row, center, center);
+  gap: 12px;
+}
+
+.header__left-part {
+  @include flex(row, center, center);
+}
+
+.header__button {
+  background-color: $white;
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .header__container {
+    @include padding-horizontal($padding-hr-tablet);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .header__container {
+    @include padding-horizontal($padding-hr-mobile);
+  }
+}

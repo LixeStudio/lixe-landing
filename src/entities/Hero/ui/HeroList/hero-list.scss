@@ -1,0 +1,58 @@
+@use '../../../../app/assets/scss/utils' as *;
+
+.hero__list {
+  @include flex(row);
+  column-gap: 24px;
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  z-index: 2;
+}
+
+.hero__list-item {
+  @include flex(row, center, center);
+  gap: 10px;
+  @include font(19px, 600, 26px);
+
+  &:before {
+    content: '';
+    @include circle(8px);
+    border: 1px solid $dark;
+  }
+}
+
+@media screen and (max-width: $desktop-md) {
+  .hero__list {
+    width: 35%;
+    flex-wrap: wrap;
+    bottom: 0px;
+    right: 0px;
+  }
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .hero__list {
+    column-gap: 8px;
+  }
+
+  .hero__list-item {
+    @include font(16px, 600, 23px);
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .hero__list {
+    position: static;
+    @include flex(row, space-between);
+    width: 100%;
+    margin-top: 12px;
+    column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .hero__list {
+    row-gap: 5px;
+  }
+}

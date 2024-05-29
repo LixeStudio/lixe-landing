@@ -1,0 +1,7 @@
+@use '../../../../app/assets/scss/utils' as *;
+
+.contacts-item {
+  @include flex(row, flex-start, center);
+  gap: 4px;
+  @include font(18px, 600, 26px);
+}
