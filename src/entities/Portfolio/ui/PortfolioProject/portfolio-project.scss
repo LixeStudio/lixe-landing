@@ -1,4 +1,4 @@
-@use '../../../../app/assets/scss/utils' as *;
+@use '@/app/assets/scss/utils' as *;
 
 .portfolio__project {
   @include flex(column, flex-start);

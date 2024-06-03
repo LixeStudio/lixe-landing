@@ -1,4 +1,4 @@
-@use '../../../../app/assets/scss/utils' as *;
+@use '@/app/assets/scss/utils' as *;
 
 .lang-dropdown {
   @include size(70px, 37px);

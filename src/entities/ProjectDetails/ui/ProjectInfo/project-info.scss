@@ -1,4 +1,4 @@
-@use '../../../../app/assets/scss/utils' as *;
+@use '@/app/assets/scss/utils' as *;
 
 .info__container {
   @include flex(column, center, center);

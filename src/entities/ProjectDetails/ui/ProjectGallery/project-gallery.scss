@@ -1,4 +1,4 @@
-@use '../../../../app/assets/scss/utils' as *;
+@use '@/app/assets/scss/utils' as *;
 
 .gallery__container {
   @include padding-horizontal($padding-hr-desktop);
