@@ -1,6 +1,6 @@
-@use '../../../app/assets/scss/utils' as *;
+@use '@/app/assets/scss/utils' as *;
 
-.tab {
+.label {
   height: 46px;
   width: min-content;
   padding: 10px 24px;
@@ -9,7 +9,7 @@
   background-color: $gray;
   transition: all 0.5s ease;
 
-  &.tab_selected,
+  &.label_selected,
   &:hover {
     background-color: $dark;
     color: $white;
@@ -21,20 +21,20 @@
   }
 }
 
-.tab__container {
+.label__container {
   height: 26px;
   @include flex(row, center, center);
   gap: 4px;
 }
 
-.tab__title {
+.label__title {
   @include font(18px, 600, 26px);
   text-wrap: nowrap;
   white-space: nowrap;
   text-transform: capitalize;
 }
 
-.tab__number {
+.label__number {
   @include font(10px, 400, 18px);
   align-self: flex-start;
 }
