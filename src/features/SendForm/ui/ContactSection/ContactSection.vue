@@ -5,7 +5,8 @@ import { BaseButton } from '@/shared/ui';
 import { BaseFormTextField } from '@/shared/ui';
 import { BaseTextareaField } from '@/shared/ui';
 import { format } from 'date-fns';
-import { ref } from 'vue';
+import { ref, inject } from 'vue';
+import { sendForm } from '../../api/api';
 
 const props = defineProps(['isModal']);
 const emit = defineEmits(['closeModal']);
@@ -14,16 +15,26 @@ const name = ref('');
 const email = ref('');
 const details = ref('');
 
-const handleSubmit = () => {
-  console.log({
+const setMessage = inject('setMessage');
+
+const handleSubmit = async (e) => {
+  const data = {
     name: name.value,
     email: email.value,
     details: details.value,
     date: format(new Date(), 'yyyy-MM-dd')
-  });
+  };
+
+  const status = await sendForm(data);
+  setMessage({ status, text: 'Your message has been successfully sent' });
+  setTimeout(() => setMessage(null), 3000);
+
   if (props.isModal) {
     emit('closeModal');
+    return;
   }
+
+  e.target.reset();
 };
 </script>
 

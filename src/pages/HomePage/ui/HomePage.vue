@@ -6,6 +6,7 @@ import { PortfolioSection } from '@/widgets/PortfolioSection';
 import { ContactModal } from '@/widgets/ContactModal';
 import { AppFooter } from '@/widgets/AppFooter';
 import { DetailsModal } from '@/widgets/DetailsModal';
+import { BaseMessage } from '@/shared/ui';
 import { ref, provide } from 'vue';
 import { hideScroll, displayScroll } from '../lib/helpers/scrollHelpers';
 
@@ -40,6 +41,14 @@ const closeDetailsModal = () => {
 };
 
 provide('openModal', openDetailsModal);
+
+const message = ref(null);
+
+const setMessage = (value) => {
+  message.value = value;
+};
+
+provide('setMessage', setMessage);
 </script>
 
 <template>
@@ -58,5 +67,8 @@ provide('openModal', openDetailsModal);
       @closeModal="closeDetailsModal"
       :project="selectedProject"
     />
+  </Transition>
+  <Transition>
+    <BaseMessage v-if="message" :message="message" />
   </Transition>
 </template>

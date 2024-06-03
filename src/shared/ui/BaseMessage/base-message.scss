@@ -1,0 +1,24 @@
+@use '@/app/assets/scss/utils' as *;
+
+.message {
+  position: fixed;
+  z-index: 9999;
+  top: 20px;
+  align-self: center;
+  @include padding-horizontal(16px);
+}
+
+.message__container {
+  padding: 15px 18px;
+  @include flex(row, center, center);
+  gap: 12px;
+  border-radius: 8px;
+}
+
+.message__icon {
+  @include size(20px);
+}
+
+.message__text {
+  @include font(16px, 500, 24px);
+}
