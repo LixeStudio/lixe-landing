@@ -41,13 +41,13 @@
   color: $dark-4;
 }
 
-.portfolio__project-tag,
-.portfolio__project-tags {
+.portfolio__project-label,
+.portfolio__project-labels {
   @include flex(row, flex-start, center);
   gap: 8px;
 }
 
-.portfolio__project-tag-circle {
+.portfolio__project-label-circle {
   @include circle(4px, $dark-4);
 }
 
@@ -95,7 +95,7 @@
     font-family: 'Manrope', sans-serif;
   }
 
-  .portfolio__project-tag {
+  .portfolio__project-label {
     @include font(14px, 400, 20px);
   }
 }

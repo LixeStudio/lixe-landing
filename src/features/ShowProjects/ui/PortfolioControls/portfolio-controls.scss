@@ -14,7 +14,7 @@
   gap: 100px;
 }
 
-.portfolio__tabs {
+.portfolio__labels {
   @include flex(row);
   flex-wrap: wrap;
   gap: 8px;

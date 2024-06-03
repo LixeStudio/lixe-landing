@@ -14,6 +14,7 @@
 @media screen and (max-width: $desktop-sm) {
   .portfolio__container {
     @include padding-horizontal($padding-hr-tablet);
+    @include padding-vertical(40px);
   }
 }
 
