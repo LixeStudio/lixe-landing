@@ -3,22 +3,22 @@
 .message {
   position: fixed;
   z-index: 9999;
-  top: 20px;
+  top: 1.25rem;
   align-self: center;
-  @include padding-horizontal(16px);
+  @include padding-horizontal(1rem);
 }
 
 .message__container {
-  padding: 15px 18px;
+  padding: 0.9375rem 1.125rem;
   @include flex(row, center, center);
-  gap: 12px;
-  border-radius: 8px;
+  gap: 0.75rem;
+  border-radius: 0.5rem;
 }
 
 .message__icon {
-  @include size(20px);
+  @include size(1.25rem);
 }
 
 .message__text {
-  @include font(16px, 500, 24px);
+  @include font(1rem, 500, 150%);
 }

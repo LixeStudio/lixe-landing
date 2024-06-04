@@ -1,9 +1,9 @@
 @use '@/app/assets/scss/utils' as *;
 
 .label {
-  height: 46px;
+  height: 2.875rem;
   width: min-content;
-  padding: 10px 24px;
+  padding: 0.625rem 1.5rem;
   @include flex(row, center, center);
   border-radius: $border-radius;
   background-color: $gray;
@@ -22,19 +22,19 @@
 }
 
 .label__container {
-  height: 26px;
+  height: 1.625rem;
   @include flex(row, center, center);
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .label__title {
-  @include font(18px, 600, 26px);
+  @include font(1.125rem, 600, 144%);
   text-wrap: nowrap;
   white-space: nowrap;
   text-transform: capitalize;
 }
 
 .label__number {
-  @include font(10px, 400, 18px);
+  @include font(0.625rem, 400, 180%);
   align-self: flex-start;
 }

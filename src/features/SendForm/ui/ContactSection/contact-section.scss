@@ -2,50 +2,50 @@
 
 .contact {
   @include flex(column);
-  gap: 40px;
+  gap: 2.5rem;
 }
 
 .contact__top-part {
   @include flex(column);
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .contact__title {
   font-family: 'Random Grotesque';
-  @include font(90px, 500, 94px);
+  @include font(5.625rem, 500, 104%);
   color: $dark-2;
 }
 
 .contact__contacts {
   @include flex(row);
-  gap: 30px;
+  gap: 1.875rem;
 }
 
 .contact-form {
   @include flex(column);
-  gap: 40px;
+  gap: 2.5rem;
 }
 
 .contact-form__fields {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  column-gap: 20px;
-  row-gap: 12px;
+  column-gap: 1.25rem;
+  row-gap: 0.75rem;
 }
 
 .contact-form__button {
-  min-width: 210px;
+  min-width: 13.125rem;
 }
 
 @media screen and (max-width: $tablet) {
   .contact__title {
-    @include font(56px, 500, 60px);
+    @include font(3.5rem, 500, 107%);
   }
 
   .contact__contacts {
     @include flex(column);
-    gap: 20px;
+    gap: 1.25rem;
   }
 
   .contact-form__fields {

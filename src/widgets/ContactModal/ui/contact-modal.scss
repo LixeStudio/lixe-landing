@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   @include size(100%);
-  padding: 0 20px;
+  padding: 0 1.25rem;
   @include flex(column, center, center);
   background-color: rgba($dark, 0.5);
 }
@@ -19,12 +19,12 @@
 .contact-modal__container {
   position: relative;
   overflow: auto;
-  max-width: 1024px;
+  max-width: 64rem;
   width: 86%;
-  padding: 60px 40px;
+  padding: 3.75rem 2.5rem;
   background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 2px 8px rgba($dark, 0.5);
+  border-radius: 1.25rem;
+  box-shadow: 0 0.125rem 0.5rem rgba($dark, 0.5);
 }
 
 @media screen and (max-width: $desktop-sm) {
@@ -45,6 +45,6 @@
   .contact-modal__container {
     height: 100%;
     border-radius: 0;
-    padding: 60px 16px;
+    padding: 3.75rem 1rem;
   }
 }

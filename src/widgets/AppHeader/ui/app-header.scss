@@ -10,14 +10,14 @@
 .header__container {
   max-width: $desktop-md;
   margin: 0 auto;
-  min-height: 80px;
+  min-height: 5rem;
   @include flex(row, space-between, center);
   @include padding-horizontal($padding-hr-desktop);
 }
 
 .header__right-part {
   @include flex(row, center, center);
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .header__left-part {

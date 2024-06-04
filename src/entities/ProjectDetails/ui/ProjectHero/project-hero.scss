@@ -6,15 +6,15 @@
 
 .project-hero__container {
   @include flex(column);
-  gap: 80px;
-  padding-top: 120px;
+  gap: 5rem;
+  padding-top: 7.5rem;
 }
 
 .project-hero__content {
-  max-width: 1140px;
+  max-width: 71.25rem;
   @include flex(column, center, center);
   align-self: center;
-  gap: 24px;
+  gap: 1.5rem;
   @include padding-horizontal($padding-hr-desktop);
 }
 
@@ -23,14 +23,14 @@
 }
 
 .project-hero__title {
-  @include font(90px, 500, 94px);
+  @include font(5.625rem, 500, 104%);
   text-align: center;
 }
 
 .project-hero__link {
   @include flex(row, center, center);
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 0.5rem;
   transition: transform 0.4s ease;
 
   &:hover {
@@ -39,17 +39,17 @@
 }
 
 .project-hero__link-text {
-  @include font(18px, 600, 26px);
+  @include font(1.125rem, 600, 144%);
   text-align: center;
 }
 
 .project-hero__icon {
-  @include size(24px);
+  @include size(1.5rem);
 }
 
 @media screen and (max-width: $desktop-md) {
   .project-hero__container {
-    padding-top: 70px;
+    padding-top: 4.375rem;
   }
 }
 
@@ -59,7 +59,7 @@
   }
 
   .project-hero__title {
-    @include font(56px, 500, 60px);
+    @include font(3.5rem, 500, 107%);
   }
 }
 
@@ -71,6 +71,6 @@
 
 @media screen and (max-width: $mobile) {
   .project-hero__title {
-    @include font(42px, 500, 50px);
+    @include font(2.625rem, 500, 119%);
   }
 }

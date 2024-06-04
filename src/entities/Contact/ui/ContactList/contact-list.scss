@@ -2,6 +2,6 @@
 
 .contacts__link {
   @include flex(row, flex-start, center);
-  gap: 4px;
-  @include font(18px, 600, 26px);
+  gap: 0.25rem;
+  @include font(1.125rem, 600, 144%);
 }

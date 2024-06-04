@@ -2,21 +2,21 @@
 
 .hero__list {
   @include flex(row);
-  column-gap: 24px;
+  column-gap: 1.5rem;
   position: absolute;
-  bottom: 15px;
-  right: 10px;
+  bottom: 0.9375rem;
+  right: 0.625rem;
   z-index: 2;
 }
 
 .hero__list-item {
   @include flex(row, center, center);
-  gap: 10px;
-  @include font(19px, 600, 26px);
+  gap: 0.625rem;
+  @include font(1.1875rem, 600, 137%);
 
   &:before {
     content: '';
-    @include circle(8px);
+    @include circle(0.5rem);
     border: 1px solid $dark;
   }
 }
@@ -25,19 +25,19 @@
   .hero__list {
     width: 35%;
     flex-wrap: wrap;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0rem;
+    right: 0rem;
   }
 }
 
 @media screen and (max-width: $desktop-sm) {
   .hero__list {
-    column-gap: 8px;
+    column-gap: 0.5rem;
   }
 
   .hero__list-item {
-    @include font(16px, 600, 23px);
-    gap: 5px;
+    @include font(1rem, 600, 144%);
+    gap: 0.3125rem;
   }
 }
 
@@ -46,13 +46,13 @@
     position: static;
     @include flex(row, space-between);
     width: 100%;
-    margin-top: 12px;
-    column-gap: 20px;
+    margin-top: 0.75rem;
+    column-gap: 1.25rem;
   }
 }
 
 @media screen and (max-width: $mobile) {
   .hero__list {
-    row-gap: 5px;
+    row-gap: 0.3125rem;
   }
 }

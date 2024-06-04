@@ -2,7 +2,7 @@
 
 .textarea-field__label {
   color: $dark-2;
-  @include font(18px, 600, 26px);
+  @include font(1.125rem, 600, 144%);
   display: block;
 }
 
@@ -10,9 +10,9 @@
   display: block;
   width: 100%;
   border-bottom: 1px solid $dark;
-  @include padding-vertical(20px);
+  @include padding-vertical(1.25rem);
   resize: vertical;
-  height: 63px;
+  height: 3.9375rem;
 
   &::placeholder {
     color: $dark-4;

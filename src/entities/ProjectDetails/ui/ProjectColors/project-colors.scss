@@ -8,12 +8,12 @@
   display: grid;
   grid-template-columns: 320px 320px auto;
   grid-template-rows: auto;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   overflow: hidden;
 }
 
 .colors__color-box {
-  height: 275px;
+  height: 17.1875rem;
   position: relative;
 
   &:nth-child(5) {
@@ -23,9 +23,9 @@
 
 .colors__color-title {
   position: absolute;
-  left: 20px;
-  bottom: 20px;
-  @include font(28px, 500, 36px);
+  left: 1.25rem;
+  bottom: 1.25rem;
+  @include font(1.75rem, 500, 128.5%);
   text-transform: uppercase;
 }
 
@@ -51,7 +51,7 @@
   }
 
   .colors__color-box {
-    height: 180px;
+    height: 11.25rem;
 
     &:nth-child(3) {
       grid-column: 1 / span 2;

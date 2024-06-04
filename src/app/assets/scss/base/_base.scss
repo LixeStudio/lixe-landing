@@ -25,13 +25,13 @@ h6 {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0.625rem;
   background-color: $gray-2;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: $dark-7;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {

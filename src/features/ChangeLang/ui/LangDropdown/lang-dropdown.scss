@@ -1,30 +1,30 @@
 @use '@/app/assets/scss/utils' as *;
 
 .lang-dropdown {
-  @include size(70px, 37px);
+  @include size(4.375rem, 2.3125rem);
 }
 
 .lang-dropdown__container {
   @include size(100%);
   transition: all 0.1s ease-in;
   background-color: $white;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   overflow: hidden;
-  @include padding-horizontal(12px);
+  @include padding-horizontal(0.75rem);
 
   &.lang-dropdown__container_opened {
-    height: 110px;
+    height: 6.875rem;
     transition: all 0.2s ease-out;
   }
 }
 
 .lang-dropdown__button {
-  padding: 8px 0;
+  padding: 0.5rem 0;
   cursor: pointer;
 }
 
 .lang-dropdown__item {
-  @include font(16px, 500, 22px);
+  @include font(1rem, 500, 137.5%);
   font-family: 'Random Grotesque';
   cursor: pointer;
   transition: color 0.5s ease;
@@ -38,13 +38,13 @@
 
 .lang-dropdown__item_active {
   @include flex(row);
-  gap: 8px;
+  gap: 0.5rem;
   text-transform: uppercase;
 
   &::after {
     content: url(@/shared/assets/icons/chevron-down.svg);
     position: relative;
-    bottom: 1px;
+    bottom: 0.0625rem;
     transition: all 0.4s ease;
   }
 
@@ -56,12 +56,12 @@
 
 .lang-dropdown__items {
   @include flex(column);
-  gap: 8px;
+  gap: 0.5rem;
   color: $dark-5;
   text-transform: uppercase;
 }
 
 .lang-dropdown__line {
-  height: 1px;
+  height: 0.0625rem;
   background-color: $dark-6;
 }

@@ -2,84 +2,63 @@
 
 .hero__container {
   @include padding-horizontal($padding-hr-desktop);
-  @include padding-vertical(25px, 40px);
+  @include padding-vertical(1.5625rem, 2.5rem);
 }
 
 .hero__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  gap: 20px;
-  min-height: 282px;
-}
-
-.hero__title-wrapper {
-  position: relative;
-}
-
-.hero__video-background {
-  position: absolute;
-  top: 0;
-  @include size(100%);
-  object-fit: cover;
+  gap: 1.25rem;
+  min-height: 17.625rem;
 }
 
 .hero__title {
-  @include font(90px, 500, 94px);
+  @include font(5.625rem, 500, 104%);
+  min-width: 34.375rem;
   position: relative;
-  mix-blend-mode: screen;
-  @include size(100%);
-  background-color: $white;
-  cursor: default;
-}
-
-.hero__title-span {
-  display: block;
-  min-width: 550px;
+  z-index: 2;
 }
 
 .hero__details {
-  @include padding-vertical(20px);
+  @include padding-vertical(1.25rem);
   @include flex(column);
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .hero__paragraph {
-  @include font(16px, 400, 23px);
+  @include font(1rem, 400, 144%);
 }
 
 .hero__box {
-  margin-top: -75px;
+  margin-top: -4.6875rem;
   position: relative;
 }
 
 @media screen and (max-width: $desktop-md) {
   .hero__details {
-    @include padding-vertical(0px);
+    @include padding-vertical(0rem);
   }
 
   .hero__box {
-    margin-top: -65px;
+    margin-top: -4.0625rem;
   }
 }
 
 @media screen and (max-width: $desktop-sm) {
   .hero__container {
     @include padding-horizontal($padding-hr-tablet);
-    @include padding-vertical(22px, 30px);
+    @include padding-vertical(1.375rem, 1.875rem);
   }
 
   .hero__box {
-    margin-top: 15px;
+    margin-top: 0.9375rem;
   }
 
   .hero__title {
-    @include font(56px, 500, 60px);
-  }
-
-  .hero__title-span {
+    @include font(3.5rem, 500, 107%);
     min-width: auto;
-    max-width: 340px;
+    max-width: 21.25rem;
   }
 
   .hero__content {
@@ -92,15 +71,15 @@
 @media screen and (max-width: $tablet) {
   .hero__container {
     @include padding-horizontal($padding-hr-mobile);
-    @include padding-vertical(22px, 25px);
+    @include padding-vertical(1.375rem, 1.5625rem);
   }
 
   .hero__box {
-    margin-top: -15px;
+    margin-top: -0.9375rem;
   }
 
   .hero__content {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 1rem;
   }
 }

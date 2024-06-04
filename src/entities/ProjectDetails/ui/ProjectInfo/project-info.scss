@@ -6,32 +6,32 @@
 }
 
 .info__grid {
-  max-width: 900px;
+  max-width: 56.25rem;
   width: 100%;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: auto;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .info__box {
   @include flex(column);
-  gap: 28px;
+  gap: 1.75rem;
 }
 
 .info__list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 28px;
+  gap: 1.75rem;
 }
 
 .info__title {
-  @include font(42px, 500, 50px);
+  @include font(2.625rem, 500, 119%);
 }
 
 .info__description {
   @include flex(column);
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .info__description-link {
@@ -41,11 +41,11 @@
 .info__description-subtitle {
   font-family: 'Manrope', sans-serif;
   color: $dark-4;
-  @include font(16px, 400, 23px);
+  @include font(1rem, 400, 144%);
 }
 
 .info__description-paragraph {
-  @include font(18px, 600, 26px);
+  @include font(1.125rem, 600, 144%);
 }
 
 @media screen and (max-width: $desktop-sm) {

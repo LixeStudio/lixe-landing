@@ -2,19 +2,19 @@
 
 .portfolio__container {
   @include padding-horizontal($padding-hr-desktop);
-  @include padding-vertical(60px);
+  @include padding-vertical(3.75rem);
   @include flex(column);
-  gap: 40px;
+  gap: 2.5rem;
 }
 
 .portfolio__title {
-  @include font(56px, 500, 60px);
+  @include font(3.5rem, 500, 107%);
 }
 
 @media screen and (max-width: $desktop-sm) {
   .portfolio__container {
     @include padding-horizontal($padding-hr-tablet);
-    @include padding-vertical(40px);
+    @include padding-vertical(2.5rem);
   }
 }
 

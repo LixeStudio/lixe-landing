@@ -2,10 +2,10 @@
 
 .close-button {
   position: absolute;
-  top: 16px;
-  right: 20px;
+  top: 1rem;
+  right: 1.25rem;
   @include flex(column, center, center);
-  @include size(48px);
+  @include size(3rem);
   cursor: pointer;
   z-index: 9999;
 }

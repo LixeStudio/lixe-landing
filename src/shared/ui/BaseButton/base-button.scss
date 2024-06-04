@@ -2,21 +2,21 @@
 
 .button-primary {
   width: min-content;
-  min-height: 46px;
+  min-height: 2.875rem;
   @include flex(column, center, center);
-  @include padding-horizontal(24px);
+  @include padding-horizontal(1.5rem);
   border-radius: $border-radius;
   border: 1px solid $dark;
   cursor: pointer;
 
   &:hover .button-primary__inner {
-    transform: translateY(-22px);
+    transform: translateY(-1.375rem);
   }
 }
 
 .button-primary__inner-wrapper {
   overflow: hidden;
-  height: 22px;
+  height: 1.375rem;
 }
 
 .button-primary__inner {
@@ -30,7 +30,7 @@
   text-wrap: nowrap;
   white-space: nowrap;
   text-transform: uppercase;
-  @include font(16px, 500, 22px);
+  @include font(1rem, 500, 137.5%);
 }
 
 @media screen and (max-width: $mobile) {

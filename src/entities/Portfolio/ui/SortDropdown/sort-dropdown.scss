@@ -2,17 +2,17 @@
 
 .sort-dropdown__container {
   overflow: hidden;
-  min-width: 95px;
+  min-width: 5.9375rem;
   max-width: min-content;
-  height: 37px;
+  height: 2.3125rem;
   @include padding-horizontal(0);
   transition:
     min-width 0.3s ease-in 0.3s,
     height 0.1s ease-in 0s;
 
   &.sort-dropdown__container_opened {
-    min-width: 250px;
-    height: 110px;
+    min-width: 15.625rem;
+    height: 6.875rem;
     transition:
       min-width 0.3s ease-in,
       height 0.2s ease-in 0.3s;
@@ -20,12 +20,12 @@
 }
 
 .sort-dropdown__button {
-  padding: 8px 0;
+  padding: 0.5rem 0;
   cursor: pointer;
 }
 
 .sort-dropdown__item {
-  @include font(16px, 500, 22px);
+  @include font(1rem, 500, 137.5%);
   font-family: 'Random Grotesque';
   cursor: pointer;
   transition: color 0.5s ease;
@@ -43,18 +43,18 @@
 
 .sort-dropdown__item_active {
   @include flex(row, space-between);
-  gap: 8px;
+  gap: 0.5rem;
   text-transform: uppercase;
 
   &::after {
     content: url(@/shared/assets/icons/chevron-down.svg);
     transition: all 0.4s ease;
     background-color: $gray-2;
-    @include size(25px);
+    @include size(1.5625rem);
     @include flex(column, center, center);
     border-radius: 50%;
     position: relative;
-    bottom: 3px;
+    bottom: 0.1875rem;
   }
 
   &.sort-dropdown__icon-rotate::after {
@@ -64,11 +64,11 @@
 
 .sort-dropdown__items {
   @include flex(column);
-  gap: 8px;
+  gap: 0.5rem;
   color: $dark-5;
 }
 
 .sort-dropdown__line {
-  height: 1px;
+  height: 0.0625rem;
   background-color: $dark-6;
 }

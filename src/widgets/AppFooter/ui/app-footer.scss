@@ -9,57 +9,57 @@
   max-width: $desktop-md;
   margin: 0 auto;
   @include padding-horizontal($padding-hr-desktop);
-  @include padding-vertical(40px);
+  @include padding-vertical(2.5rem);
   @include flex(row, flex-end);
 }
 
 .footer__content {
   width: 80%;
   @include flex(column);
-  gap: 40px;
+  gap: 2.5rem;
 }
 
 .footer__content-top-part {
   @include flex(column);
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .footer__title {
-  @include font(90px, 500, 94px);
+  @include font(5.625rem, 500, 104%);
 }
 
 .footer__paragraph {
-  @include font(28px, 500, 36px);
+  @include font(1.75rem, 500, 128.5%);
   color: $gray-4;
 }
 
 .footer__line {
-  height: 1px;
+  height: 0.0625rem;
   background-color: $white;
 }
 
 .footer__box {
   @include flex(row);
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .footer__logo-box {
-  width: 217px;
+  width: 13.5625rem;
   @include flex(column);
-  gap: 16px;
+  gap: 1rem;
 }
 
 .footer__logo {
-  max-width: 75px;
+  max-width: 4.6875rem;
 }
 
 .footer__contacts {
   @include flex(column);
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .footer__copyright {
-  @include font(16px, 400, 23px);
+  @include font(1rem, 400, 144%);
   color: $dark-5;
 }
 
@@ -73,7 +73,7 @@
   }
 
   .footer__title {
-    @include font(56px, 500, 60px);
+    @include font(3.5rem, 500, 107%);
   }
 }
 
@@ -83,11 +83,11 @@
   }
 
   .footer__paragraph {
-    @include font(18px, 500, 26px);
+    @include font(1.125rem, 500, 144%);
   }
 
   .footer__logo-box {
-    width: 155px;
+    width: 9.6875rem;
   }
 
   .footer__copyright {

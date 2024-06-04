@@ -13,14 +13,14 @@
     0 20%,
     25% 20%
   );
-  height: 410px;
+  height: 25.625rem;
   overflow: hidden;
 }
 
 .hero__video-filter-svg {
   visibility: hidden;
   position: absolute;
-  @include size(0px);
+  @include size(0rem);
 }
 
 .hero__video-box {
@@ -53,12 +53,12 @@
 
 @media screen and (max-width: $tablet) {
   .hero__video-wrapper {
-    height: 190px;
+    height: 11.875rem;
   }
 }
 
 @media screen and (max-width: $mobile) {
   .hero__video-wrapper {
-    height: 160px;
+    height: 10rem;
   }
 }

@@ -1,11 +1,11 @@
 @use '@/app/assets/scss/utils' as *;
 
 .button-with-arrow {
-  min-height: 52px;
+  min-height: 3.25rem;
   max-width: min-content;
-  padding-right: 30px;
+  padding-right: 1.875rem;
   @include flex(row, flex-start, center);
-  gap: 12px;
+  gap: 0.75rem;
   position: relative;
   z-index: 1;
   cursor: pointer;
@@ -26,7 +26,7 @@
 
   &:hover .button-with-arrow__circle {
     background-color: $dark;
-    border: 1px solid $dark;
+    border: 0.0625rem solid $dark;
   }
 
   &:hover .button-with-arrow__circle_light {
@@ -38,11 +38,11 @@
   text-wrap: nowrap;
   white-space: nowrap;
   text-transform: uppercase;
-  @include font(16px, 500, 22px);
+  @include font(1rem, 500, 137.5%);
 }
 
 .button-with-arrow__circle {
-  @include circle(52px);
+  @include circle(3.25rem);
   @include flex(row, center, center);
   position: relative;
   overflow: hidden;
@@ -64,14 +64,14 @@
 
 .button-with-arrow__inner {
   position: absolute;
-  @include circle(calc(100% + 30px));
+  @include circle(calc(100% + 1.875rem));
   transition: transform 0.7s cubic-bezier(0.25, 0.74, 0.22, 0.99) 0s;
-  transform: scale(0) translate3d(-50%, -50%, 0px);
+  transform: scale(0) translate3d(-50%, -50%, 0rem);
 }
 
 @media screen and (max-width: $tablet) {
   .button-with-arrow {
-    padding-right: 0px;
+    padding-right: 0rem;
   }
 
   .button-with-arrow__text_hidden {
