@@ -35,7 +35,6 @@
 }
 
 .button-with-arrow__text {
-  text-wrap: nowrap;
   white-space: nowrap;
   text-transform: uppercase;
   @include font(1rem, 500, 137.5%);

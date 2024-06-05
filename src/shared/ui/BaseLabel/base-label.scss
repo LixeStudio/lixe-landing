@@ -29,7 +29,6 @@
 
 .label__title {
   @include font(1.125rem, 600, 144%);
-  text-wrap: nowrap;
   white-space: nowrap;
   text-transform: capitalize;
 }

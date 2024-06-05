@@ -27,7 +27,6 @@
 
 .button-primary__text {
   font-family: 'Random Grotesque';
-  text-wrap: nowrap;
   white-space: nowrap;
   text-transform: uppercase;
   @include font(1rem, 500, 137.5%);
