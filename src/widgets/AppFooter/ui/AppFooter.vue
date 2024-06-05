@@ -34,7 +34,14 @@ const emit = defineEmits(['openModal']);
           </div>
           <ContactList class="footer__contacts" />
         </div>
-        <div class="footer__line"></div>
+        <div
+          class="footer__line"
+          v-motion
+          :initial="{ width: '0%' }"
+          :visible-once="{ width: '100%' }"
+          :delay="200"
+          :duration="1000"
+        />
         <p class="footer__copyright">{{ $t('translation.footer.copyright') }}</p>
       </div>
     </div>

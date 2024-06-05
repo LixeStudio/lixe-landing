@@ -19,11 +19,11 @@ const setCurrentSort = (current) => {
 </script>
 
 <template>
-  <div class="sort-dropdown">
+  <div class="sort-dropdown" v-motion-slide-visible-once-right :delay="200">
     <div
       class="sort-dropdown__container"
       :style="{
-        width: i18n.global.locale === 'eng' ? '90px' : null
+        width: i18n.global.locale === 'eng' ? '5.625rem' : null
       }"
       :class="{
         'sort-dropdown__container_opened': isDropdownOpened
