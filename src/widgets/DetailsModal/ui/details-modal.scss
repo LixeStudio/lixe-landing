@@ -19,6 +19,7 @@
 
 .details-modal__box {
   max-width: $desktop-md;
+  width: 100%;
   margin: 0 auto;
   @include flex(column);
   gap: 3.75rem;

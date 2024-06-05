@@ -18,10 +18,6 @@
   @include padding-horizontal($padding-hr-desktop);
 }
 
-.project-hero__title-wrapper {
-  overflow: hidden;
-}
-
 .project-hero__title {
   @include font(5.625rem, 500, 104%);
   text-align: center;

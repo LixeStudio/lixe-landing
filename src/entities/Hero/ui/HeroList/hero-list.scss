@@ -23,10 +23,16 @@
 
 @media screen and (max-width: $desktop-md) {
   .hero__list {
-    width: 35%;
+    width: 33%;
     flex-wrap: wrap;
     bottom: 0rem;
     right: 0rem;
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .hero__list {
+    width: 35%;
   }
 }
 

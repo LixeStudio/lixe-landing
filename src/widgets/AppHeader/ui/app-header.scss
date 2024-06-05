@@ -17,7 +17,6 @@
 
 .header__right-part {
   @include flex(row, center, center);
-  gap: 0.75rem;
 }
 
 .header__left-part {
