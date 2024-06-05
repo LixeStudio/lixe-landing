@@ -3,6 +3,7 @@ import './lang-dropdown.scss';
 import { computed, ref, watch } from 'vue';
 import { setToLocalStorage, getFromLocalStorage } from '../../lib/helpers/storageHelper';
 import { i18n } from '@/app/providers/i18n';
+import { dropdownLanguages } from '../../constants/languages';
 
 const languages = i18n.global.availableLocales;
 const currentLang = ref(getFromLocalStorage('lang') || i18n.global.locale);
@@ -42,7 +43,7 @@ const setCurrentLang = (current) => {
             'lang-dropdown__icon-rotate': isDropdownOpened
           }"
         >
-          <span>{{ currentLang }}</span>
+          <span>{{ dropdownLanguages[currentLang] }}</span>
         </div>
       </div>
       <div class="lang-dropdown__items">
@@ -53,7 +54,7 @@ const setCurrentLang = (current) => {
           :key="option"
           @click="setCurrentLang(option)"
         >
-          <span>{{ option }}</span>
+          <span>{{ dropdownLanguages[option] }}</span>
         </div>
       </div>
     </div>
