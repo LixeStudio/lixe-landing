@@ -1,8 +1,9 @@
 <script setup>
 import './client-feedback.scss';
+import { i18n } from '@/app/providers/i18n';
 
 defineProps({
-  clientFeedback: Object
+  feedback: Object
 });
 </script>
 
@@ -12,16 +13,14 @@ defineProps({
       <div class="client-feedback__content">
         <p class="client-feedback__title">Client feedback</p>
         <div class="client-feedback__box">
-          <blockquote class="client-feedback__quote">{{ clientFeedback.clientQuote }}</blockquote>
+          <blockquote class="client-feedback__quote">
+            {{ feedback.text[i18n.global.locale] }}
+          </blockquote>
           <div class="client-feedback__client-info">
-            <img
-              class="client-feedback__client-photo"
-              :src="clientFeedback.clientPhoto"
-              alt="Client photo"
-            />
+            <img class="client-feedback__client-photo" :src="feedback.avatar" alt="Client photo" />
             <div class="client-feedback__info-box">
-              <p class="client-feedback__name">{{ clientFeedback.clientName }}</p>
-              <p class="client-feedback__details">{{ clientFeedback.clientDetails }}</p>
+              <p class="client-feedback__name">{{ feedback.name }}</p>
+              <p class="client-feedback__details">{{ feedback.role[i18n.global.locale] }}</p>
             </div>
           </div>
         </div>

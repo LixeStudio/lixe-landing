@@ -1,7 +1,16 @@
 <script setup>
 import './portfolio-section.scss';
-import { projects } from '../constants/projects';
+import { getProjects } from '../api/api';
 import { PortfolioControls } from '@/features/ShowProjects';
+import { ref } from 'vue';
+
+const projects = ref([]);
+
+const getPortfolioProjects = async () => {
+  projects.value = await getProjects();
+};
+
+getPortfolioProjects();
 </script>
 
 <template>
