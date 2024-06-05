@@ -2,6 +2,12 @@
 import './contact-modal.scss';
 import { BaseCloseButton } from '@/shared/ui';
 import { ContactSection } from '@/features/SendForm';
+import { animateText } from '@/shared/lib/text-animation/animateText';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  animateText();
+});
 
 const emit = defineEmits(['closeModal']);
 </script>

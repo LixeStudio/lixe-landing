@@ -14,11 +14,16 @@
   "dependencies": {
     "@vueuse/motion": "^2.1.0",
     "date-fns": "^3.6.0",
+    "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
+    "lenis": "^1.1.1",
+    "split-type": "^0.3.4",
     "vue": "^3.4.21",
     "vue-i18n": "^9.13.1"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
+    "@types/jquery": "^3.5.30",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/eslint-config-prettier": "^9.0.0",
     "eslint": "^8.57.0",

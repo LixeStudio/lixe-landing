@@ -1,9 +1,7 @@
 <script setup>
 import './contact-section.scss';
 import { ContactList } from '@/entities/Contact';
-import { BaseButton } from '@/shared/ui';
-import { BaseFormTextField } from '@/shared/ui';
-import { BaseTextareaField } from '@/shared/ui';
+import { BaseFormTextField, BaseTextareaField, BaseButton } from '@/shared/ui';
 import { format } from 'date-fns';
 import { ref, inject } from 'vue';
 import { sendForm } from '../../api/api';
@@ -41,7 +39,9 @@ const handleSubmit = async (e) => {
 <template>
   <section class="contact">
     <div class="contact__top-part">
-      <h2 class="contact__title">{{ $t('translation.contactModal.title') }}</h2>
+      <h2 class="contact__title" text-split letters-fade-in>
+        {{ $t('translation.contactModal.title') }}
+      </h2>
       <ContactList class="contact__contacts" theme="light" />
     </div>
     <form class="contact-form" @submit.prevent="handleSubmit" novalidate>
