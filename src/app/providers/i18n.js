@@ -4,16 +4,16 @@ import { translationEsp } from '@/shared/config/i18n/esp/translation';
 import { translationRus } from '@/shared/config/i18n/rus/translation';
 
 export const i18n = createI18n({
-  locale: 'eng',
-  fallbackLocale: 'eng',
+  locale: 'en',
+  fallbackLocale: 'en',
   messages: {
-    eng: {
+    en: {
       translation: translationEng
     },
-    esp: {
+    es: {
       translation: translationEsp
     },
-    rus: {
+    ru: {
       translation: translationRus
     }
   }
