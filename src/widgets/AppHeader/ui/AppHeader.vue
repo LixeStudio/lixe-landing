@@ -3,7 +3,6 @@ import './app-header.scss';
 import { BaseButton } from '@/shared/ui';
 import { LangDropdown } from '@/features/ChangeLang';
 import { useScrollDirection } from '../composables/useScrollDirection';
-import { useMotions } from '@vueuse/motion';
 
 defineProps({
   showButton: Boolean
@@ -11,7 +10,6 @@ defineProps({
 
 const emit = defineEmits(['openModal']);
 const { direction } = useScrollDirection();
-const motions = useMotions();
 </script>
 
 <template>
@@ -27,30 +25,16 @@ const motions = useMotions();
       </div>
       <div class="header__right-part">
         <LangDropdown />
-        <transition :css="false" @leave="(el, done) => motions.button.leave(done)">
-          <BaseButton
-            class="header__button"
-            isHidden
-            v-if="showButton"
-            v-motion="'button'"
-            :initial="{
-              y: 100
-            }"
-            :enter="{
-              y: 0
-            }"
-            :leave="{
-              y: -150,
-              transition: {
-                duration: 300,
-                type: 'keyframes',
-                ease: 'ease'
-              }
-            }"
-            @click="emit('openModal')"
-            >{{ $t('translation.header.buttonText') }}</BaseButton
-          >
-        </transition>
+        <div
+          class="header__button"
+          :class="{
+            header__button_active: showButton
+          }"
+        >
+          <BaseButton isHidden @click="emit('openModal')">{{
+            $t('translation.header.buttonText')
+          }}</BaseButton>
+        </div>
       </div>
     </div>
   </header>

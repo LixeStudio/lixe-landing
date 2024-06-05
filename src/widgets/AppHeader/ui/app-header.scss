@@ -24,7 +24,23 @@
 }
 
 .header__button {
-  background-color: $white;
+  @include size(0rem);
+  opacity: 0;
+  transform: translateY(-9.375rem);
+  overflow: hidden;
+  transition: all 0.4s linear;
+
+  &.header__button_active {
+    transition: all 0.4s linear;
+    opacity: 1;
+    transform: translateY(0rem);
+    @include size(100%);
+    margin-left: 0.75rem;
+  }
+
+  & .button-primary {
+    background-color: $white;
+  }
 }
 
 @media screen and (max-width: $desktop-sm) {
