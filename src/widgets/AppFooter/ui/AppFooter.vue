@@ -11,11 +11,22 @@ const emit = defineEmits(['openModal']);
     <div class="footer__container">
       <div class="footer__content">
         <div class="footer__content-top-part">
-          <h3 class="footer__title">{{ $t('translation.footer.title') }}</h3>
-          <p class="footer__paragraph">{{ $t('translation.footer.description') }}</p>
-          <BaseButtonWithArrow theme="light" @click="emit('openModal')" />
+          <h3 class="footer__title" text-split letters-fade-in>
+            {{ $t('translation.footer.title') }}
+          </h3>
+          <p class="footer__paragraph" text-split words-slide-up>
+            {{ $t('translation.footer.description') }}
+          </p>
+          <BaseButtonWithArrow theme="light" v-motion-slide-left @click="emit('openModal')" />
         </div>
-        <div class="footer__line"></div>
+        <div
+          class="footer__line"
+          v-motion
+          :initial="{ width: '0%' }"
+          :visible-once="{ width: '100%' }"
+          :delay="200"
+          :duration="1000"
+        />
         <div class="footer__box">
           <div class="footer__logo-box">
             <img class="footer__logo" src="../assets/icons/logo.svg" alt="Lixe logo" />

@@ -4,7 +4,14 @@ import './hero-video.scss';
 
 <template>
   <div class="hero__video-box">
-    <div class="hero__video-wrapper">
+    <div
+      class="hero__video-wrapper"
+      v-motion
+      :initial="{ opacity: 0, scale: 0.5 }"
+      :enter="{ opacity: 1, scale: 1 }"
+      :delay="200"
+      :duration="100"
+    >
       <video class="hero__video" autoplay loop muted>
         <source src="../../assets/video/hero-video.mp4" type="video/mp4" />
       </video>
