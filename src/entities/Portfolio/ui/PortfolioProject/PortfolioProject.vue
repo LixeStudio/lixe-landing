@@ -1,6 +1,7 @@
 <script setup>
 import { ref, inject } from 'vue';
 import './portfolio-project.scss';
+import { i18n } from '@/app/providers/i18n';
 
 defineProps(['project']);
 
@@ -51,15 +52,28 @@ const openModal = inject('openModal');
     <div class="portfolio__circle" ref="circle">
       <div class="portfolio__circle-inner">View</div>
     </div>
-    <img class="portfolio__project-image" :src="project.image" alt="Project Image" />
+    <img
+      class="portfolio__project-image"
+      src="../../../../widgets/PortfolioSection/assets/projects-images/green-evolution/main-image.png"
+      alt="Project Image"
+    />
     <div class="portfolio__project-box">
-      <h3 class="portfolio__project-title">{{ project.title }}</h3>
-      <p class="portfolio__project-description">{{ project.shortDescription }}</p>
+      <h3 class="portfolio__project-title">{{ project.title[i18n.global.locale].title }}</h3>
+      <p class="portfolio__project-description">
+        {{ project['card-description'][i18n.global.locale].description }}
+      </p>
     </div>
-    <div class="portfolio__project-tags">
-      <div class="portfolio__project-tag" v-for="(tag, index) in project.tags" :key="index">
-        <span>{{ tag }}</span>
-        <span v-if="index !== project.tags.length - 1" class="portfolio__project-tag-circle"></span>
+    <div class="portfolio__project-labels">
+      <div
+        class="portfolio__project-label"
+        v-for="(label, index) in project.labels[i18n.global.locale]"
+        :key="index"
+      >
+        <span>{{ label }}</span>
+        <span
+          v-if="index !== project.labels[i18n.global.locale].length - 1"
+          class="portfolio__project-label-circle"
+        ></span>
       </div>
     </div>
   </div>
