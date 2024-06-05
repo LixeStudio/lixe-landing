@@ -7,8 +7,11 @@ import { ContactModal } from '@/widgets/ContactModal';
 import { AppFooter } from '@/widgets/AppFooter';
 import { DetailsModal } from '@/widgets/DetailsModal';
 import { BaseMessage } from '@/shared/ui';
-import { ref, provide } from 'vue';
+import { ref, provide, onMounted, watch } from 'vue';
 import { hideScroll, displayScroll } from '../lib/helpers/scrollHelpers';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Lenis from 'lenis';
 
 const showButton = ref(false);
 
@@ -49,6 +52,39 @@ const setMessage = (value) => {
 };
 
 provide('setMessage', setMessage);
+
+const getWrapper = () => {
+  if (isContactModalOpened.value) {
+    return document.querySelector('.contact-modal__container');
+  } else if (selectedProject.value) {
+    return document.querySelector('.details-modal');
+  }
+  return window;
+};
+
+const smoothScroll = () => {
+  const lenis = new Lenis({ wrapper: getWrapper() });
+
+  lenis.on('scroll', ScrollTrigger.update);
+
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
+
+  gsap.ticker.lagSmoothing(0);
+};
+
+onMounted(() => {
+  smoothScroll();
+});
+
+watch(
+  [isContactModalOpened, selectedProject],
+  () => {
+    smoothScroll();
+  },
+  { flush: 'post' }
+);
 </script>
 
 <template>
