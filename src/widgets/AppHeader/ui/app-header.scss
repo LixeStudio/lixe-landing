@@ -55,3 +55,9 @@
     @include padding-horizontal($padding-hr-mobile);
   }
 }
+
+@media screen and (max-width: $mobile) {
+  .header__button {
+    display: none;
+  }
+}

@@ -31,7 +31,7 @@ const { direction } = useScrollDirection();
             header__button_active: showButton
           }"
         >
-          <BaseButton isHidden @click="emit('openModal')">{{
+          <BaseButton @click="emit('openModal')">{{
             $t('translation.header.buttonText')
           }}</BaseButton>
         </div>

@@ -31,9 +31,3 @@
   text-transform: uppercase;
   @include font(1rem, 500, 137.5%);
 }
-
-@media screen and (max-width: $mobile) {
-  .button-primary_hidden {
-    display: none;
-  }
-}
