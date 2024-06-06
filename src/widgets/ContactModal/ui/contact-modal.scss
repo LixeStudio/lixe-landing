@@ -8,12 +8,12 @@
   @include size(100%);
   padding: 0 1.25rem;
   @include flex(column, center, center);
-  background-color: rgba($dark, 0.5);
 }
 
 .contact-modal__overlay {
   position: absolute;
   @include size(100%);
+  background-color: rgba($dark, 0.5);
 }
 
 .contact-modal__container {
