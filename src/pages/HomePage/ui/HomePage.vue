@@ -21,14 +21,18 @@ const setShowButton = (value) => {
 
 const isContactModalOpened = ref(false);
 
+let lenis;
+
 const openContactModal = () => {
   isContactModalOpened.value = true;
   hideScroll();
+  lenis.stop();
 };
 
 const closeContactModal = () => {
   isContactModalOpened.value = false;
   displayScroll();
+  lenis.start();
 };
 
 const selectedProject = ref(null);
@@ -63,7 +67,7 @@ const getWrapper = () => {
 };
 
 const smoothScroll = () => {
-  const lenis = new Lenis({ wrapper: getWrapper() });
+  lenis = new Lenis({ wrapper: getWrapper() });
 
   lenis.on('scroll', ScrollTrigger.update);
 
