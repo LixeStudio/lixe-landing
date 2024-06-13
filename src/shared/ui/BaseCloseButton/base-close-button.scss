@@ -8,4 +8,17 @@
   @include size(3rem);
   cursor: pointer;
   z-index: 9999;
+  transition: transform 0.4s ease;
+
+  & svg path {
+    transition: all 0.4s ease;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:hover svg path {
+    stroke: $dark;
+  }
 }
