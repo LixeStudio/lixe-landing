@@ -33,8 +33,10 @@ const openContactModal = () => {
 
 const closeContactModal = () => {
   isContactModalOpened.value = false;
-  displayScroll();
-  lenis.start();
+  setTimeout(() => {
+    displayScroll();
+    lenis.start();
+  }, 500);
 };
 
 const selectedProject = ref(null);
@@ -46,7 +48,9 @@ const openDetailsModal = (value) => {
 
 const closeDetailsModal = () => {
   selectedProject.value = null;
-  displayScroll();
+  setTimeout(() => {
+    displayScroll();
+  }, 500);
 };
 
 provide('openModal', openDetailsModal);
@@ -84,8 +88,10 @@ onMounted(() => {
   hideScroll();
   setTimeout(() => {
     isLoading.value = false;
-    displayScroll();
-    smoothScroll();
+    setTimeout(() => {
+      displayScroll();
+      smoothScroll();
+    }, 500);
   }, 1000);
 });
 
@@ -118,7 +124,7 @@ watch(
   <Transition>
     <BaseMessage v-if="message" :message="message" />
   </Transition>
-  <Transition mode="in-out">
+  <Transition>
     <LoadingModal v-if="isLoading" />
   </Transition>
 </template>
