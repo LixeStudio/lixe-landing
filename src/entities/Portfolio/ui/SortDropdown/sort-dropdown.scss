@@ -7,15 +7,15 @@
   height: 2.3125rem;
   @include padding-horizontal(0);
   transition:
-    min-width 0.2s linear 0.1s,
-    height 0.1s linear 0s;
+    min-width 0.3s linear 0.2s,
+    height 0.2s linear 0s;
 
   &.sort-dropdown__container_opened {
     min-width: 15.625rem;
     height: 6.875rem;
     transition:
       min-width 0.3s linear,
-      height 0.2s linear 0.3s;
+      height 0.2s linear 0.2s;
   }
 
   &.sort-dropdown__container_opened .sort-dropdown__items {
