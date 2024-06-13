@@ -4,4 +4,9 @@
   @include flex(row, flex-start, center);
   gap: 0.25rem;
   @include font(1.125rem, 600, 144%);
+  transition: transform 0.4s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
