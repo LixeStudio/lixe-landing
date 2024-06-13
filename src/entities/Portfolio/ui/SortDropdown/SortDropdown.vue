@@ -19,7 +19,7 @@ const setCurrentSort = (current) => {
 </script>
 
 <template>
-  <div class="sort-dropdown" v-motion-slide-visible-once-right :delay="200">
+  <div class="sort-dropdown" v-motion-slide-visible-once-right :delay="1300">
     <div
       class="sort-dropdown__container"
       :style="{

@@ -17,7 +17,12 @@ const emit = defineEmits(['openModal']);
           <p class="footer__paragraph" text-split words-slide-up>
             {{ $t('translation.footer.description') }}
           </p>
-          <BaseButtonWithArrow theme="light" v-motion-slide-left @click="emit('openModal')" />
+          <BaseButtonWithArrow
+            theme="light"
+            v-motion-slide-left
+            :delay="1200"
+            @click="emit('openModal')"
+          />
         </div>
         <div
           class="footer__line"

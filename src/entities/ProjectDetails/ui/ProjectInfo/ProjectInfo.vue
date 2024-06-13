@@ -30,9 +30,9 @@ const infoListItems = getInfoListItems(props.project);
             v-for="(item, index) in infoListItems"
             :key="item.title"
             v-motion
-            :initial="{ opacity: 0 }"
-            :visible-once="{ opacity: 1 }"
-            :delay="index * 100"
+            :initial="{ opacity: 0, y: 50 }"
+            :visible-once="{ opacity: 1, y: 0 }"
+            :delay="index * 150"
           >
             <h4 class="info__description-subtitle">{{ item.title }}:</h4>
             <p class="info__description-paragraph" v-if="item.link">

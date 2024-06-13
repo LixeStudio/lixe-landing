@@ -1,6 +1,6 @@
 <script setup>
 import './portfolio-controls.scss';
-import { computed, ref, nextTick, watch } from 'vue';
+import { computed, ref, nextTick, watch, onMounted } from 'vue';
 import { BaseLabel } from '@/shared/ui';
 import { PortfolioProject } from '@/entities/Portfolio';
 import { SortDropdown } from '@/entities/Portfolio';
@@ -64,6 +64,10 @@ const setCurrentSort = (current) => {
 watch([currentLabel, currentSort], () => {
   forceRender();
 });
+
+onMounted(() => {
+  setTimeout(() => forceRender(), 1000);
+});
 </script>
 
 <template>
@@ -78,7 +82,7 @@ watch([currentLabel, currentSort], () => {
         v-motion
         :initial="{ opacity: 0 }"
         :visible-once="{ opacity: 1 }"
-        :delay="index * 100"
+        :delay="index * 100 + 1000"
       >
         {{ label }}
       </BaseLabel>

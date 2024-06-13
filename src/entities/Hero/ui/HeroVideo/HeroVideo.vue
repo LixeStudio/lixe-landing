@@ -9,8 +9,8 @@ import './hero-video.scss';
       v-motion
       :initial="{ opacity: 0, scale: 0.5 }"
       :enter="{ opacity: 1, scale: 1 }"
-      :delay="200"
-      :duration="100"
+      :delay="1000"
+      :duration="300"
     >
       <video class="hero__video" autoplay loop muted>
         <source src="../../assets/video/hero-video.mp4" type="video/mp4" />

@@ -5,7 +5,7 @@ import { HomePage } from '@/pages/HomePage';
 import { onMounted } from 'vue';
 
 onMounted(() => {
-  animateText();
+  setTimeout(() => animateText(), 1000);
 });
 </script>
 

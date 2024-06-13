@@ -36,7 +36,7 @@ useScrollHandler(handleScroll);
           </p>
           <BaseButtonWithArrow
             v-motion-slide-right
-            :delay="800"
+            :delay="1800"
             isHidden
             @click="emit('openModal')"
           />
