@@ -6,6 +6,7 @@ import { PortfolioSection } from '@/widgets/PortfolioSection';
 import { ContactModal } from '@/widgets/ContactModal';
 import { AppFooter } from '@/widgets/AppFooter';
 import { DetailsModal } from '@/widgets/DetailsModal';
+import { LoadingModal } from '@/widgets/LoadingModal';
 import { BaseMessage } from '@/shared/ui';
 import { ref, provide, onMounted, watch } from 'vue';
 import { hideScroll, displayScroll } from '../lib/helpers/scrollHelpers';
@@ -14,6 +15,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 
 const showButton = ref(false);
+const isLoading = ref(true);
 
 const setShowButton = (value) => {
   showButton.value = value;
@@ -79,7 +81,12 @@ const smoothScroll = () => {
 };
 
 onMounted(() => {
-  smoothScroll();
+  hideScroll();
+  setTimeout(() => {
+    isLoading.value = false;
+    displayScroll();
+    smoothScroll();
+  }, 1000);
 });
 
 watch(
@@ -110,5 +117,8 @@ watch(
   </Transition>
   <Transition>
     <BaseMessage v-if="message" :message="message" />
+  </Transition>
+  <Transition mode="in-out">
+    <LoadingModal v-if="isLoading" />
   </Transition>
 </template>

@@ -1,0 +1,35 @@
+@use '@/app/assets/scss/utils' as *;
+
+.loading-modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  @include size(100%);
+  background-color: $white;
+  @include flex(column, center, center);
+}
+
+.loading-modal__inner-wrapper {
+  overflow: hidden;
+  height: 2.625rem;
+}
+
+.loading-modal__inner {
+  @include flex(column);
+  gap: 0.5rem;
+  animation: transform-text 0.7s;
+}
+
+@keyframes transform-text {
+  0% {
+    transform: translateY(-3.125rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.loading-modal__image {
+  width: 9.0625rem;
+}

@@ -21,7 +21,7 @@ const { direction } = useScrollDirection();
   >
     <div class="header__container">
       <div class="header__left-part">
-        <img src="../assets/icons/logo.svg" alt="Lixe logo" />
+        <img src="@/shared/assets/icons/logo.svg" alt="Lixe logo" />
       </div>
       <div class="header__right-part">
         <LangDropdown />
