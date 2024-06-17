@@ -16,6 +16,9 @@ import Lenis from 'lenis';
 
 const showButton = ref(false);
 const isLoading = ref(true);
+const isVideoLoaded = ref(false);
+
+provide('setIsVideoLoaded', () => (isVideoLoaded.value = true));
 
 const setShowButton = (value) => {
   showButton.value = value;
@@ -125,6 +128,6 @@ watch(
     <BaseMessage v-if="message" :message="message" />
   </Transition>
   <Transition>
-    <LoadingModal v-if="isLoading" />
+    <LoadingModal v-if="isLoading || !isVideoLoaded" />
   </Transition>
 </template>

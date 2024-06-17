@@ -1,5 +1,8 @@
 <script setup>
+import { inject } from 'vue';
 import './hero-video.scss';
+
+const setIsVideoLoaded = inject('setIsVideoLoaded');
 </script>
 
 <template>
@@ -12,7 +15,7 @@ import './hero-video.scss';
       :delay="1000"
       :duration="300"
     >
-      <video class="hero__video" autoplay loop muted>
+      <video class="hero__video" autoplay loop muted @loadeddata="setIsVideoLoaded">
         <source src="../../assets/video/hero-video.mp4" type="video/mp4" />
       </video>
     </div>
