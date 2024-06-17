@@ -26,19 +26,39 @@ const setShowButton = (value) => {
 
 const isContactModalOpened = ref(false);
 
-let lenis;
+let lenis = null;
+let currentWrapper = window;
+
+function initializeLenis(wrapper) {
+  lenis = new Lenis({
+    wrapper,
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smooth: true
+  });
+  lenis.on('scroll', ScrollTrigger.update);
+
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
+
+  gsap.ticker.lagSmoothing(0);
+}
+function changeWrapper(newWrapper) {
+  lenis.destroy();
+  initializeLenis(newWrapper);
+}
 
 const openContactModal = () => {
   isContactModalOpened.value = true;
   hideScroll();
-  lenis.stop();
 };
 
 const closeContactModal = () => {
   isContactModalOpened.value = false;
   setTimeout(() => {
     displayScroll();
-    lenis.start();
+    changeWrapper(currentWrapper);
   }, 500);
 };
 
@@ -53,6 +73,7 @@ const closeDetailsModal = () => {
   selectedProject.value = null;
   setTimeout(() => {
     displayScroll();
+    changeWrapper(currentWrapper);
   }, 500);
 };
 
@@ -66,34 +87,13 @@ const setMessage = (value) => {
 
 provide('setMessage', setMessage);
 
-const getWrapper = () => {
-  if (isContactModalOpened.value) {
-    return document.querySelector('.contact-modal__container');
-  } else if (selectedProject.value) {
-    return document.querySelector('.details-modal');
-  }
-  return window;
-};
-
-const smoothScroll = () => {
-  lenis = new Lenis({ wrapper: getWrapper() });
-
-  lenis.on('scroll', ScrollTrigger.update);
-
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-
-  gsap.ticker.lagSmoothing(0);
-};
-
 onMounted(() => {
   hideScroll();
   setTimeout(() => {
     isLoading.value = false;
     setTimeout(() => {
       displayScroll();
-      smoothScroll();
+      initializeLenis(currentWrapper);
     }, 500);
   }, 1000);
 });
@@ -101,7 +101,11 @@ onMounted(() => {
 watch(
   [isContactModalOpened, selectedProject],
   () => {
-    smoothScroll();
+    if (isContactModalOpened.value) {
+      changeWrapper(document.querySelector('.contact-modal__container'));
+    } else if (selectedProject.value) {
+      changeWrapper(document.querySelector('.details-modal'));
+    }
   },
   { flush: 'post' }
 );
