@@ -26,7 +26,7 @@ const openModal = inject('openModal');
     class="portfolio__project"
     v-motion
     :initial="{ y: 40, scale: 1, opacity: 0 }"
-    :visible="{
+    :visible-once="{
       y: 0,
       scale: 1,
       opacity: 1,
