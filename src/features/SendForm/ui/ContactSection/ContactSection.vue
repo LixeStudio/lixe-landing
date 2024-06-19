@@ -39,7 +39,13 @@ const handleSubmit = async (e) => {
 <template>
   <section class="contact">
     <div class="contact__top-part">
-      <h2 class="contact__title" text-split letters-fade-in>
+      <h2
+        class="contact__title"
+        modal-text-split
+        modal-letters-fade-in
+        details-text-split
+        details-letters-fade-in
+      >
         {{ $t('translation.contactModal.title') }}
       </h2>
       <ContactList class="contact__contacts" theme="light" />

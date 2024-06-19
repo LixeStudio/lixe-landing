@@ -19,7 +19,7 @@ const infoListItems = getInfoListItems(props.project);
           </h3>
           <div class="info__description">
             <h4 class="info__description-subtitle">Project description</h4>
-            <p class="info__description-paragraph" text-split words-slide-up>
+            <p class="info__description-paragraph" details-text-split details-words-slide-up>
               {{ project.description }}
             </p>
           </div>

@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import './base-button-with-arrow.scss';
 import { colors } from '../../constants/colors';
-import { getOffsets } from '../../lib/helpers/offsetsHelper';
+import { getOffsets } from '../../lib/helpers/offsets-helper';
 
 defineProps({
   theme: { type: String },

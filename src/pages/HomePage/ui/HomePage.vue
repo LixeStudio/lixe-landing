@@ -9,9 +9,10 @@ import { DetailsModal } from '@/widgets/DetailsModal';
 import { LoadingModal } from '@/widgets/LoadingModal';
 import { BaseMessage } from '@/shared/ui';
 import { ref, provide, onMounted, watch } from 'vue';
-import { hideScroll, displayScroll } from '../lib/helpers/scrollHelpers';
+import { hideScroll, displayScroll } from '../lib/helpers/scroll-helpers';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { animateText } from '../lib/helpers/animate-text';
 import Lenis from 'lenis';
 
 const showButton = ref(false);
@@ -109,6 +110,12 @@ watch(
   },
   { flush: 'post' }
 );
+
+watch([isVideoLoaded, isLoading], () => {
+  if (isLoading.value || !isVideoLoaded.value) {
+    animateText(document.body);
+  }
+});
 </script>
 
 <template>

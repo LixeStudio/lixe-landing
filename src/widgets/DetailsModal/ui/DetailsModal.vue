@@ -5,11 +5,11 @@ import { ProjectGallery, ProjectColors, ClientFeedback } from '@/entities/Projec
 import { ContactSection } from '@/features/SendForm';
 import { ProjectInfo, ProjectHero } from '@/entities/ProjectDetails';
 import { i18n } from '@/app/providers/i18n';
-import { animateText } from '@/shared/lib/text-animation/animateText';
+import { animateText } from '../lib/helpers/animate-text';
 import { onMounted } from 'vue';
 
 onMounted(() => {
-  animateText(true);
+  animateText();
 });
 
 defineProps(['project']);

@@ -5,7 +5,7 @@ import SplitType from 'split-type';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const animateText = (isDetailsModal) => {
+export const animateText = () => {
   new SplitType('[text-split]', {
     types: 'words, chars',
     tagName: 'span'
@@ -14,17 +14,11 @@ export const animateText = (isDetailsModal) => {
   function createScrollTrigger(triggerElement, timeline) {
     ScrollTrigger.create({
       trigger: triggerElement,
-      start: 'top bottom',
+      start: 'top 80%',
+      onEnter: () => timeline.play(),
       onLeaveBack: () => {
         timeline.pause();
       }
-    });
-
-    ScrollTrigger.create({
-      trigger: triggerElement,
-      start: 'top 80%',
-      onEnter: () => timeline.play(),
-      scroller: isDetailsModal ? '.details-modal' : false
     });
   }
 

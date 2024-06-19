@@ -2,7 +2,7 @@
 import './contact-modal.scss';
 import { BaseCloseButton } from '@/shared/ui';
 import { ContactSection } from '@/features/SendForm';
-import { animateText } from '@/shared/lib/text-animation/animateText';
+import { animateText } from '../lib/helpers/animate-text';
 import { onMounted } from 'vue';
 
 onMounted(() => {
