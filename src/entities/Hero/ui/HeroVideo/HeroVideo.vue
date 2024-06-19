@@ -15,7 +15,7 @@ const setIsVideoLoaded = inject('setIsVideoLoaded');
       :delay="1000"
       :duration="300"
     >
-      <video class="hero__video" autoplay loop muted @loadeddata="setIsVideoLoaded">
+      <video class="hero__video" autoplay loop muted playsinline @loadeddata="setIsVideoLoaded">
         <source src="../../assets/video/hero-video.mp4" type="video/mp4" />
       </video>
     </div>
